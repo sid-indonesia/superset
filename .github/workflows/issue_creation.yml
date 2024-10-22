@@ -23,6 +23,8 @@ jobs:
 
       - name: Setup supersetbot
         uses: ./.github/actions/setup-supersetbot/
+        with:
+          from-npm: 'false'
 
       - name: Execute supersetbot orglabel command
         env:
