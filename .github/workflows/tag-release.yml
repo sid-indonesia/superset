@@ -63,6 +63,8 @@ jobs:
 
       - name: Setup supersetbot
         uses: ./.github/actions/setup-supersetbot/
+        with:
+          from-npm: 'false'
 
       - name: Try to login to DockerHub
         continue-on-error: true
@@ -121,6 +123,8 @@ jobs:
 
       - name: Setup supersetbot
         uses: ./.github/actions/setup-supersetbot/
+        with:
+          from-npm: 'false'
 
       - name: Label the PRs with the right release-related labels
         env:

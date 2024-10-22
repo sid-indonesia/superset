@@ -71,6 +71,8 @@ jobs:
       - name: Setup supersetbot
         if: steps.check.outputs.python || steps.check.outputs.frontend || steps.check.outputs.docker
         uses: ./.github/actions/setup-supersetbot/
+        with:
+          from-npm: 'false'
 
       - name: Build Docker Image
         if: steps.check.outputs.python || steps.check.outputs.frontend || steps.check.outputs.docker
@@ -85,7 +87,7 @@ jobs:
             PLATFORM_ARG="--platform linux/amd64"
           fi
 
-          supersetbot -r summitdeveloper/superset docker \
+          supersetbot docker \
             --preset ${{ matrix.build_preset }} \
             --context "$EVENT" \
             --context-ref "$RELEASE" $FORCE_LATEST \
