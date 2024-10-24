@@ -22,7 +22,7 @@ params:
   datasource: 69__table
   donut: true
   groupby:
-  - clinical_stage
+    - clinical_stage
   innerRadius: 44
   label_line: true
   labels_outside: true

@@ -182,10 +182,9 @@ const StyledLink = styled('a')`
 const FinePrint = styled('div')`
   font-size: 14px;
   color: var(--ifm-secondary-text);
-`
+`;
 
 const Community = () => {
-
   const [showCalendar, setShowCalendar] = useState(false); // State to control calendar visibility
 
   const toggleCalendar = () => {
@@ -252,10 +251,15 @@ const Community = () => {
                 </StyledLink>
                 <br />
                 <StyledLink onClick={toggleCalendar}>
-                <img src="/img/calendar-icon.svg" alt="calendar-icon" />
+                  <img src="/img/calendar-icon.svg" alt="calendar-icon" />
                   {showCalendar ? 'Hide Calendar' : 'Display Calendar*'}
                 </StyledLink>
-                {!showCalendar  && <FinePrint><sup>*</sup>Clicking on this link will load and send data from and to Google.</FinePrint>}
+                {!showCalendar && (
+                  <FinePrint>
+                    <sup>*</sup>Clicking on this link will load and send data
+                    from and to Google.
+                  </FinePrint>
+                )}
               </>
             }
           />

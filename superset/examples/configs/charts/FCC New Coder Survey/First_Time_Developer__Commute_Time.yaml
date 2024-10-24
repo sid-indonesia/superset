@@ -18,39 +18,39 @@ slice_name: First Time Developer & Commute Time
 viz_type: sankey
 params:
   adhoc_filters:
-  - clause: WHERE
-    comparator: '1'
-    expressionType: SIMPLE
-    filterOptionName: filter_9hkcdqhiqor_84pk01t2k9
-    isExtra: false
-    isNew: false
-    operator: ==
-    sqlExpression: null
-    subject: is_software_dev
-  - clause: WHERE
-    comparator: 'NULL'
-    expressionType: SIMPLE
-    filterOptionName: filter_d5l1qwsthl_okyuouvmors
-    isExtra: false
-    isNew: false
-    operator: '!='
-    sqlExpression: null
-    subject: first_time_developer
-  - clause: WHERE
-    comparator: 'NULL'
-    expressionType: SIMPLE
-    filterOptionName: filter_95548uvadi_f990s8nzl4
-    isExtra: false
-    isNew: false
-    operator: '!='
-    sqlExpression: null
-    subject: communite_time
+    - clause: WHERE
+      comparator: "1"
+      expressionType: SIMPLE
+      filterOptionName: filter_9hkcdqhiqor_84pk01t2k9
+      isExtra: false
+      isNew: false
+      operator: ==
+      sqlExpression: null
+      subject: is_software_dev
+    - clause: WHERE
+      comparator: "NULL"
+      expressionType: SIMPLE
+      filterOptionName: filter_d5l1qwsthl_okyuouvmors
+      isExtra: false
+      isNew: false
+      operator: "!="
+      sqlExpression: null
+      subject: first_time_developer
+    - clause: WHERE
+      comparator: "NULL"
+      expressionType: SIMPLE
+      filterOptionName: filter_95548uvadi_f990s8nzl4
+      isExtra: false
+      isNew: false
+      operator: "!="
+      sqlExpression: null
+      subject: communite_time
   color_scheme: supersetColors
   datasource: 42__table
   granularity_sqla: time_start
   groupby:
-  - first_time_developer
-  - communite_time
+    - first_time_developer
+    - communite_time
   label_colors: {}
   metric: count
   queryFields:

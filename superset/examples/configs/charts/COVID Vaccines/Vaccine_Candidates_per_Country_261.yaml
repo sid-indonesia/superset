@@ -27,7 +27,7 @@ params:
   datasource: 14__table
   entity: country_name
   linear_color_scheme: schemeYlOrBr
-  max_bubble_size: '25'
+  max_bubble_size: "25"
   metric: count
   row_limit: 10000
   secondary_metric:

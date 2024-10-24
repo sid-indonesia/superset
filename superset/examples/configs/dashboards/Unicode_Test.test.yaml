@@ -32,17 +32,17 @@ position:
     type: CHART
   GRID_ID:
     children:
-    - ROW-SyT19EFEQ
+      - ROW-SyT19EFEQ
     id: GRID_ID
     type: GRID
   ROOT_ID:
     children:
-    - GRID_ID
+      - GRID_ID
     id: ROOT_ID
     type: ROOT
   ROW-SyT19EFEQ:
     children:
-    - CHART-Hkx6154FEm
+      - CHART-Hkx6154FEm
     id: ROW-SyT19EFEQ
     meta:
       background: BACKGROUND_TRANSPARENT

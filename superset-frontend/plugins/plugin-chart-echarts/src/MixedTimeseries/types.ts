@@ -87,14 +87,14 @@ export type EchartsMixedTimeseriesFormData = QueryFormData & {
   yAxisIndexB?: number;
   groupby: QueryFormColumn[];
   groupbyB: QueryFormColumn[];
-  xAxisTitleColor: string;       // Tambahkan properti ini
-  xAxisTitleFontSize: number;    // Tambahkan properti ini
-  xAxisTitleAlign: string;       // Tambahkan properti ini
-  xAxisTitleVAlign: string;      // Tambahkan properti ini
-  yAxisTitleColor: string;       // Tambahkan properti ini
-  yAxisTitleFontSize: number;    // Tambahkan properti ini
-  yAxisTitleAlign: string;       // Tambahkan properti ini
-  yAxisTitleVAlign: string;      // Tambahkan properti ini
+  xAxisTitleColor: string; // Tambahkan properti ini
+  xAxisTitleFontSize: number; // Tambahkan properti ini
+  xAxisTitleAlign: string; // Tambahkan properti ini
+  xAxisTitleVAlign: string; // Tambahkan properti ini
+  yAxisTitleColor: string; // Tambahkan properti ini
+  yAxisTitleFontSize: number; // Tambahkan properti ini
+  yAxisTitleAlign: string; // Tambahkan properti ini
+  yAxisTitleVAlign: string; // Tambahkan properti ini
 } & LegendFormData &
   TitleFormData;
 
@@ -144,14 +144,14 @@ export const DEFAULT_FORM_DATA: EchartsMixedTimeseriesFormData = {
   ...DEFAULT_TITLE_FORM_DATA,
 
   // Tambahkan properti yang baru kamu definisikan
-  xAxisTitleColor: DEFAULT_TITLE_FORM_DATA.xAxisTitleColor ?? '#000',  // default value
-  xAxisTitleFontSize: DEFAULT_TITLE_FORM_DATA.xAxisTitleFontSize ?? 24,  // default value
-  xAxisTitleAlign: DEFAULT_TITLE_FORM_DATA.xAxisTitleAlign ?? 'center',  // default value
-  xAxisTitleVAlign: DEFAULT_TITLE_FORM_DATA.xAxisTitleVAlign ?? 'middle',  // default value
-  yAxisTitleColor: DEFAULT_TITLE_FORM_DATA.yAxisTitleColor ?? '#000',  // default value
-  yAxisTitleFontSize: DEFAULT_TITLE_FORM_DATA.yAxisTitleFontSize ?? 24,  // default value
-  yAxisTitleAlign: DEFAULT_TITLE_FORM_DATA.yAxisTitleAlign ?? 'center',  // default value
-  yAxisTitleVAlign: DEFAULT_TITLE_FORM_DATA.yAxisTitleVAlign ?? 'middle',  // default value
+  xAxisTitleColor: DEFAULT_TITLE_FORM_DATA.xAxisTitleColor ?? '#000', // default value
+  xAxisTitleFontSize: DEFAULT_TITLE_FORM_DATA.xAxisTitleFontSize ?? 24, // default value
+  xAxisTitleAlign: DEFAULT_TITLE_FORM_DATA.xAxisTitleAlign ?? 'center', // default value
+  xAxisTitleVAlign: DEFAULT_TITLE_FORM_DATA.xAxisTitleVAlign ?? 'middle', // default value
+  yAxisTitleColor: DEFAULT_TITLE_FORM_DATA.yAxisTitleColor ?? '#000', // default value
+  yAxisTitleFontSize: DEFAULT_TITLE_FORM_DATA.yAxisTitleFontSize ?? 24, // default value
+  yAxisTitleAlign: DEFAULT_TITLE_FORM_DATA.yAxisTitleAlign ?? 'center', // default value
+  yAxisTitleVAlign: DEFAULT_TITLE_FORM_DATA.yAxisTitleVAlign ?? 'middle', // default value
 };
 
 export interface EchartsMixedTimeseriesProps

@@ -23,10 +23,10 @@ params:
   columns: []
   datasource: 14__table
   groupby:
-  - clinical_stage
+    - clinical_stage
   label_colors: {}
   metrics:
-  - count
+    - count
   row_limit: 10000
   show_legend: false
   time_range: No filter

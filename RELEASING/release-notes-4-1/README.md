@@ -19,7 +19,7 @@ under the License.
 
 # Release Notes for Superset 4.1.0
 
-Superset 4.1.0 brings a range of new features and quality of life improvements.  This release is a minor version, meaning it doesn't include any breaking changes. However, users of basic Superset docker images like `4.1.0` should see the note at the bottom of this file about [changes to those builds](/RELEASING/release-notes-4-1/README.md#change-to-docker-image-builds).
+Superset 4.1.0 brings a range of new features and quality of life improvements. This release is a minor version, meaning it doesn't include any breaking changes. However, users of basic Superset docker images like `4.1.0` should see the note at the bottom of this file about [changes to those builds](/RELEASING/release-notes-4-1/README.md#change-to-docker-image-builds).
 
 ## Highlights
 
@@ -34,6 +34,7 @@ We released a [Big Number with Time Period Comparison](https://github.com/apache
 </div>
 
 ### Table with Time Comparison
+
 Added functionality to do [table time comparisons](https://github.com/apache/superset/pull/28057) behind the `CHART_PLUGINS_EXPERIMENTAL` feature flag. This will help improve and facilitate efficient data analysis.
 
 <div>
@@ -76,14 +77,14 @@ Note: When migrating dashboards from one Superset instance to another (using imp
 
 ### Improved Upload Forms
 
-We've made design changes to the [CSV](https://github.com/apache/superset/pull/27840), [Excel](https://github.com/apache/superset/pull/28105), and [Columnar](https://github.com/apache/superset/pull/28192
-) upload modals to improve user experience and to be more performant. The new designs has the following goals:
+We've made design changes to the [CSV](https://github.com/apache/superset/pull/27840), [Excel](https://github.com/apache/superset/pull/28105), and [Columnar](https://github.com/apache/superset/pull/28192) upload modals to improve user experience and to be more performant. The new designs has the following goals:
 
 - Improved error handling.
 - Better backend parameter validation.
 - More aligned with our other modal dialogs
 
 #### CSV
+
 <div>
     <img src="media/csv_modal_1.png" alt="Image" width="25%">
     <img src="media/csv_modal_2.png" alt="Image" width="25%">
@@ -92,6 +93,7 @@ We've made design changes to the [CSV](https://github.com/apache/superset/pull/2
 </div>
 
 #### Excel
+
 <div>
     <img src="media/excel_modal_1.png" alt="Image" width="25%">
     <img src="media/excel_modal_2.png" alt="Image" width="25%">
@@ -100,12 +102,12 @@ We've made design changes to the [CSV](https://github.com/apache/superset/pull/2
 </div>
 
 #### Columnar
+
 <div>
     <img src="media/columnar_modal_1.png" alt="Image" width="33%">
     <img src="media/columnar_modal_2.png" alt="Image" width="33%">
     <img src="media/columnar_modal_3.png" alt="Image" width="33%">
 </div>
-
 
 ### OAuth2 For Databases
 
@@ -116,6 +118,7 @@ You now have the ability to enable [OAuth2](https://github.com/apache/superset/p
 Added support for the [catalog heirachy](https://github.com/apache/superset/pull/28317) for databases that support it, such as [BigQuery (projects), Databricks, Presto, Snowflake, and Trino](https://github.com/apache/superset/pull/28416). Once enabled, users will see catalogs when selecting tables in [SQL Lab, datasets](https://github.com/apache/superset/pull/28376), and when setting up Data Access Roles
 
 ### Slack Upload Files V2 API Updates
+
 As part of [[SIP-138] Proposal for Slack file upload V2 integration for Alerts and Reports](https://github.com/apache/superset/issues/29263) we now have support for Slack file upload files v2 API call. This feature is behind the feature flag `ALERT_REPORT_SLACK_V2` and also changes the Slack channel to a selector. You may also need to add the following scopes (`channels:read`, `group:read`) to your Slack bot to work.
 
 <div>
@@ -133,7 +136,6 @@ Users can now see both the [total and percentage in tooltips](https://github.com
 ### Additional Metadata Bar To Dashboards
 
 There is now a [metadata bar](https://github.com/apache/superset/pull/27857) added to the header of dashboards. This will now show viewers of the dashboard both the owners and last modified time of the dashboard.
-
 
 ## Change to Docker image builds
 

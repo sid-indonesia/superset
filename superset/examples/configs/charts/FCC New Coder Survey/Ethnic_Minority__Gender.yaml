@@ -18,30 +18,30 @@ slice_name: Ethnic Minority & Gender
 viz_type: sankey
 params:
   adhoc_filters:
-  - clause: WHERE
-    comparator: 'NULL'
-    expressionType: SIMPLE
-    filterOptionName: filter_of9xf5uks2_5pisp1se9r5
-    isExtra: false
-    isNew: false
-    operator: '!='
-    sqlExpression: null
-    subject: ethnic_minority
-  - clause: WHERE
-    comparator: 'NULL'
-    expressionType: SIMPLE
-    filterOptionName: filter_9ikn7htywfm_2579he7pk5x
-    isExtra: false
-    isNew: false
-    operator: '!='
-    sqlExpression: null
-    subject: gender
+    - clause: WHERE
+      comparator: "NULL"
+      expressionType: SIMPLE
+      filterOptionName: filter_of9xf5uks2_5pisp1se9r5
+      isExtra: false
+      isNew: false
+      operator: "!="
+      sqlExpression: null
+      subject: ethnic_minority
+    - clause: WHERE
+      comparator: "NULL"
+      expressionType: SIMPLE
+      filterOptionName: filter_9ikn7htywfm_2579he7pk5x
+      isExtra: false
+      isNew: false
+      operator: "!="
+      sqlExpression: null
+      subject: gender
   color_scheme: supersetColors
   datasource: 42__table
   granularity_sqla: time_start
   groupby:
-  - ethnic_minority
-  - gender
+    - ethnic_minority
+    - gender
   label_colors: {}
   metric: count
   queryFields:

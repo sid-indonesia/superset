@@ -19,13 +19,13 @@ viz_type: histogram
 params:
   adhoc_filters: []
   all_columns_x:
-  - age
+    - age
   color_scheme: supersetColors
   datasource: 42__table
   granularity_sqla: time_start
   groupby: null
   label_colors: {}
-  link_length: '25'
+  link_length: "25"
   queryFields:
     groupby: groupby
   row_limit: 10000

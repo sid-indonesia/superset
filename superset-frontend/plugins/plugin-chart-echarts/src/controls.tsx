@@ -97,7 +97,11 @@ const legendOrientationControl: ControlSetItem = {
 };
 
 export const legendSection: ControlSetRow[] = [
-  [<ControlSubSectionHeader key="legend-header">{t('Legend')}</ControlSubSectionHeader>],
+  [
+    <ControlSubSectionHeader key="legend-header">
+      {t('Legend')}
+    </ControlSubSectionHeader>,
+  ],
   [showLegendControl],
   [legendTypeControl],
   [legendOrientationControl],

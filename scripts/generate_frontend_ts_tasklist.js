@@ -34,7 +34,7 @@ const getDirectories = (source) =>
 const getFilesByExtensions = (source, extensions) =>
   readdirSync(source, { withFileTypes: true })
     .filter((dirent) =>
-      extensions.some((extension) => dirent.name.endsWith(extension))
+      extensions.some((extension) => dirent.name.endsWith(extension)),
     )
     .map((dirent) => dirent.name);
 
@@ -54,14 +54,14 @@ while (directories.length) {
   if (hasJavaScriptFiles) {
     console.log(
       `${"  ".repeat(
-        curDirectory.split("/").length - 1
-      )}- [ ] \`${curDirectory}\``
+        curDirectory.split("/").length - 1,
+      )}- [ ] \`${curDirectory}\``,
     );
   } else if (hasTypeScriptFiles) {
     console.log(
       `${"  ".repeat(
-        curDirectory.split("/").length - 1
-      )}- [x] \`${curDirectory}\``
+        curDirectory.split("/").length - 1,
+      )}- [x] \`${curDirectory}\``,
     );
   }
 
@@ -69,7 +69,7 @@ while (directories.length) {
     getDirectories("./")
       .reverse() // For ABC order when pushed into the Array
       .filter((name) => name !== "node_modules") // Don't include node_modules in our packages
-      .map((directory) => `${curDirectory}/${directory}`)
+      .map((directory) => `${curDirectory}/${directory}`),
   );
   process.chdir(DEFAULT_DIRECTORY);
 }

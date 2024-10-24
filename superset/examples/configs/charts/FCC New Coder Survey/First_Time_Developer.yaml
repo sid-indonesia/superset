@@ -18,21 +18,21 @@ slice_name: First Time Developer?
 viz_type: pie
 params:
   adhoc_filters:
-  - clause: WHERE
-    comparator: Currently A Developer
-    expressionType: SIMPLE
-    filterOptionName: filter_fvi0jg9aii_2lekqrhy7qk
-    isExtra: false
-    isNew: false
-    operator: ==
-    sqlExpression: null
-    subject: developer_type
+    - clause: WHERE
+      comparator: Currently A Developer
+      expressionType: SIMPLE
+      filterOptionName: filter_fvi0jg9aii_2lekqrhy7qk
+      isExtra: false
+      isNew: false
+      operator: ==
+      sqlExpression: null
+      subject: developer_type
   color_scheme: supersetColors
   datasource: 42__table
   donut: true
   granularity_sqla: time_start
   groupby:
-  - first_time_developer
+    - first_time_developer
   innerRadius: 43
   labels_outside: true
   metric: count

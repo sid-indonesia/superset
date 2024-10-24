@@ -18,15 +18,15 @@ slice_name: Number of Aspiring Developers
 viz_type: big_number_total
 params:
   adhoc_filters:
-  - clause: WHERE
-    comparator: '0'
-    expressionType: SIMPLE
-    filterOptionName: filter_3f8ug0vnqk1_oy0mvl0izdc
-    isExtra: false
-    isNew: false
-    operator: ==
-    sqlExpression: null
-    subject: is_software_dev
+    - clause: WHERE
+      comparator: "0"
+      expressionType: SIMPLE
+      filterOptionName: filter_3f8ug0vnqk1_oy0mvl0izdc
+      isExtra: false
+      isNew: false
+      operator: ==
+      sqlExpression: null
+      subject: is_software_dev
   datasource: 42__table
   granularity_sqla: time_start
   header_font_size: 0.4

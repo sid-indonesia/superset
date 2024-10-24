@@ -24,10 +24,10 @@ params:
   datasource: 31__table
   granularity_sqla: updated
   groupby:
-  - tz
+    - tz
   include_search: false
   metrics:
-  - count
+    - count
   order_by_cols: []
   order_desc: true
   page_length: 0

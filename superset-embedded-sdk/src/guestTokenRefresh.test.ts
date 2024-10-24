@@ -38,7 +38,7 @@ describe("guest token refresh", () => {
   function makeFakeJWT(claims: any) {
     // not a valid jwt, but close enough for this code
     const tokenifiedClaims = Buffer.from(JSON.stringify(claims)).toString(
-      "base64"
+      "base64",
     );
     return `abc.${tokenifiedClaims}.xyz`;
   }

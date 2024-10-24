@@ -1,17 +1,11 @@
 {
   "entrypoints": {
     "styles": {
-      "js": [
-        "/static/dist/styles-js.js"
-      ]
+      "js": ["/static/dist/styles-js.js"]
     },
     "main": {
-      "css": [
-        "/static/dist/main-css.css"
-      ],
-      "js": [
-        "/static/dist/main-js.js"
-      ]
+      "css": ["/static/dist/main-css.css"],
+      "js": ["/static/dist/main-js.js"]
     }
   },
   "main.css": "/static/dist/main.b51d3f6225194da423d6.entry.css",

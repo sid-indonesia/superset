@@ -28,7 +28,7 @@ params:
   entity: country_citizen
   granularity_sqla: time_start
   linear_color_scheme: preset_div_1
-  max_bubble_size: '25'
+  max_bubble_size: "25"
   metric: count
   queryFields:
     entity: groupby

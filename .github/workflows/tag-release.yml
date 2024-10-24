@@ -16,11 +16,11 @@ on:
       force-latest:
         required: true
         type: choice
-        default: 'false'
+        default: "false"
         description: Whether to force a latest tag on the release
         options:
-          - 'true'
-          - 'false'
+          - "true"
+          - "false"
 jobs:
   config:
     runs-on: "ubuntu-22.04"
@@ -64,7 +64,7 @@ jobs:
       - name: Setup supersetbot
         uses: ./.github/actions/setup-supersetbot/
         with:
-          from-npm: 'false'
+          from-npm: "false"
 
       - name: Try to login to DockerHub
         continue-on-error: true
@@ -110,7 +110,6 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-
       - name: "Checkout ${{ github.ref }} ( ${{ github.sha }} )"
         uses: actions/checkout@v4
         with:
@@ -124,7 +123,7 @@ jobs:
       - name: Setup supersetbot
         uses: ./.github/actions/setup-supersetbot/
         with:
-          from-npm: 'false'
+          from-npm: "false"
 
       - name: Label the PRs with the right release-related labels
         env:

@@ -18,32 +18,32 @@ slice_name: Last Year Income Distribution
 viz_type: histogram
 params:
   adhoc_filters:
-  - clause: WHERE
-    comparator: Currently A Developer
-    expressionType: SIMPLE
-    filterOptionName: filter_fvi0jg9aii_2lekqrhy7qk
-    isExtra: false
-    isNew: false
-    operator: ==
-    sqlExpression: null
-    subject: developer_type
-  - clause: WHERE
-    comparator: '100000'
-    expressionType: SIMPLE
-    filterOptionName: filter_khdc3iypzjg_3g6h02b4f2p
-    isExtra: false
-    isNew: false
-    operator: <=
-    sqlExpression: null
-    subject: last_yr_income
+    - clause: WHERE
+      comparator: Currently A Developer
+      expressionType: SIMPLE
+      filterOptionName: filter_fvi0jg9aii_2lekqrhy7qk
+      isExtra: false
+      isNew: false
+      operator: ==
+      sqlExpression: null
+      subject: developer_type
+    - clause: WHERE
+      comparator: "100000"
+      expressionType: SIMPLE
+      filterOptionName: filter_khdc3iypzjg_3g6h02b4f2p
+      isExtra: false
+      isNew: false
+      operator: <=
+      sqlExpression: null
+      subject: last_yr_income
   all_columns_x:
-  - last_yr_income
+    - last_yr_income
   color_scheme: supersetColors
   datasource: 42__table
   granularity_sqla: time_start
   groupby: []
   label_colors: {}
-  link_length: '10'
+  link_length: "10"
   queryFields:
     groupby: groupby
   row_limit: null

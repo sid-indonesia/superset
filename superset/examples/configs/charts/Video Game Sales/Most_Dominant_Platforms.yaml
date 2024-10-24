@@ -18,21 +18,21 @@ slice_name: Most Dominant Platforms
 viz_type: pie
 params:
   adhoc_filters:
-  - clause: WHERE
-    comparator: '25'
-    expressionType: SIMPLE
-    filterOptionName: filter_znxs4o61aod_n5blgxo29r
-    isExtra: false
-    isNew: false
-    operator: <=
-    sqlExpression: null
-    subject: rank
+    - clause: WHERE
+      comparator: "25"
+      expressionType: SIMPLE
+      filterOptionName: filter_znxs4o61aod_n5blgxo29r
+      isExtra: false
+      isNew: false
+      operator: <=
+      sqlExpression: null
+      subject: rank
   color_scheme: supersetColors
   datasource: 21__table
   donut: true
   granularity_sqla: year
   groupby:
-  - publisher
+    - publisher
   innerRadius: 45
   label_line: true
   labels_outside: true

@@ -19,7 +19,7 @@ viz_type: word_cloud
 params:
   granularity_sqla: dttm
   groupby: []
-  limit: '100'
+  limit: "100"
   metric:
     aggregate: SUM
     column:
@@ -30,8 +30,8 @@ params:
   row_limit: 50000
   series: short_phrase
   since: 100 years ago
-  size_from: '10'
-  size_to: '70'
+  size_from: "10"
+  size_to: "70"
   until: now
   viz_type: word_cloud
 cache_timeout: null

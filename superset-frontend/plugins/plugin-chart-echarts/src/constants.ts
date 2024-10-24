@@ -106,20 +106,20 @@ export const DEFAULT_LEGEND_FORM_DATA: LegendFormData = {
 };
 
 export const DEFAULT_TITLE_FORM_DATA: TitleFormData = {
-  xAxisTitle: '',             // Properti yang sudah ada
-  xAxisTitleMargin: 0,        // Properti yang sudah ada
-  xAxisTitleColor: '#000000',    // Properti yang ditambahkan
-  xAxisTitleFontSize: 24,     // Properti yang ditambahkan
-  xAxisTitleAlign: 'center',  // Properti yang ditambahkan
+  xAxisTitle: '', // Properti yang sudah ada
+  xAxisTitleMargin: 0, // Properti yang sudah ada
+  xAxisTitleColor: '#000000', // Properti yang ditambahkan
+  xAxisTitleFontSize: 24, // Properti yang ditambahkan
+  xAxisTitleAlign: 'center', // Properti yang ditambahkan
   xAxisTitleVAlign: 'middle', // Properti yang ditambahkan
-  yAxisTitle: '',             // Properti yang sudah ada
-  yAxisTitleColor: '#000000',    // Properti yang ditambahkan
-  yAxisTitleFontSize: 24,     // Properti yang ditambahkan
-  yAxisTitleAlign: 'center',  // Properti yang ditambahkan
+  yAxisTitle: '', // Properti yang sudah ada
+  yAxisTitleColor: '#000000', // Properti yang ditambahkan
+  yAxisTitleFontSize: 24, // Properti yang ditambahkan
+  yAxisTitleAlign: 'center', // Properti yang ditambahkan
   yAxisTitleVAlign: 'middle', // Properti yang ditambahkan
-  yAxisTitleMargin: 0,        // Properti yang ditambahkan
-  yAxisTitlePosition: 'end',  // Properti yang sudah ada
-  };
+  yAxisTitleMargin: 0, // Properti yang ditambahkan
+  yAxisTitlePosition: 'end', // Properti yang sudah ada
+};
 
 export { DEFAULT_FORM_DATA } from './Timeseries/constants';
 
