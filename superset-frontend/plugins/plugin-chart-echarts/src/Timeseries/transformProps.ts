@@ -106,10 +106,6 @@ import {
   getYAxisFormatter,
 } from '../utils/formatters';
 import { xAxisTitleFontSizeControl } from '../controls';
-<<<<<<< HEAD
-=======
-
->>>>>>> bcb2c9a0c (4.0.2 percobaan keempat)
 export default function transformProps(
   chartProps: EchartsTimeseriesChartProps,
 ): TimeseriesChartTransformedProps {
@@ -487,21 +483,14 @@ export default function transformProps(
       color: '#000000',
       fontSize: convertInteger(xAxisTitleFontSizeControl.config.default), // code untuk menambahkan fitur dropdown pemilihan size X dan Y label di tampilan Superset
     },
-<<<<<<< HEAD
     // axisLabel juga dilakukan modifikasi, tapi untuk mengatur nilai default saja
-=======
->>>>>>> bcb2c9a0c (4.0.2 percobaan keempat)
     axisLabel: {
       hideOverlap: true,
       formatter: xAxisFormatter,
       rotate: xAxisLabelRotation,
       interval: 0, // value yang ditambahkan
       color: '#000000', // value yang ditambahkan
-<<<<<<< HEAD
-      fontSize:18, // value yang ditambahkan
-=======
       fontSize:24, // value yang ditambahkan
->>>>>>> bcb2c9a0c (4.0.2 percobaan keempat)
     },
     minorTick: { show: minorTicks },
     minInterval:
