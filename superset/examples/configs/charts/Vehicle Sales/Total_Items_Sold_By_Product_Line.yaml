@@ -23,27 +23,27 @@ params:
   datasource: 23__table
   granularity_sqla: order_date
   groupby:
-  - product_line
+    - product_line
   metrics:
-  - aggregate: SUM
-    column:
-      column_name: quantity_ordered
-      description: null
-      expression: null
-      filterable: true
-      groupby: true
-      id: 914
-      is_dttm: false
-      optionName: _col_QuantityOrdered
-      python_date_format: null
-      type: BIGINT
-      verbose_name: null
-    expressionType: SIMPLE
-    hasCustomLabel: true
-    isNew: false
-    label: '# of Products Sold'
-    optionName: metric_skdbciwba6g_z1r5w1pxlqj
-    sqlExpression: null
+    - aggregate: SUM
+      column:
+        column_name: quantity_ordered
+        description: null
+        expression: null
+        filterable: true
+        groupby: true
+        id: 914
+        is_dttm: false
+        optionName: _col_QuantityOrdered
+        python_date_format: null
+        type: BIGINT
+        verbose_name: null
+      expressionType: SIMPLE
+      hasCustomLabel: true
+      isNew: false
+      label: "# of Products Sold"
+      optionName: metric_skdbciwba6g_z1r5w1pxlqj
+      sqlExpression: null
   order_by_cols: []
   order_desc: true
   percent_metrics: null

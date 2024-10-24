@@ -18,23 +18,23 @@ slice_name: Top 15 Languages Spoken at Home
 viz_type: table
 params:
   adhoc_filters:
-  - clause: WHERE
-    comparator: 'NULL'
-    expressionType: SIMPLE
-    filterOptionName: filter_ameaka2efjv_rfv1et5nwng
-    isExtra: false
-    isNew: false
-    operator: '!='
-    sqlExpression: null
-    subject: lang_at_home
+    - clause: WHERE
+      comparator: "NULL"
+      expressionType: SIMPLE
+      filterOptionName: filter_ameaka2efjv_rfv1et5nwng
+      isExtra: false
+      isNew: false
+      operator: "!="
+      sqlExpression: null
+      subject: lang_at_home
   all_columns: []
   color_pn: true
   datasource: 42__table
   granularity_sqla: time_start
   groupby:
-  - lang_at_home
+    - lang_at_home
   metrics:
-  - count
+    - count
   order_by_cols: []
   order_desc: true
   percent_metrics: []
@@ -42,7 +42,7 @@ params:
     groupby: groupby
     metrics: metrics
   query_mode: aggregate
-  row_limit: '15'
+  row_limit: "15"
   show_cell_bars: true
   slice_id: 1386
   table_timestamp_format: smart_date

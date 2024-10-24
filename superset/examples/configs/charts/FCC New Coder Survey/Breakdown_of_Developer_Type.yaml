@@ -23,9 +23,9 @@ params:
   datasource: 42__table
   granularity_sqla: time_start
   groupby:
-  - developer_type
+    - developer_type
   metrics:
-  - count
+    - count
   order_by_cols: []
   order_desc: true
   percent_metrics: []

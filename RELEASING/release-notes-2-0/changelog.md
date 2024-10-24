@@ -30,7 +30,7 @@ under the License.
 - [#19941](https://github.com/apache/superset/pull/19941) fix(reports): Clear last value when state is WORKING (@john-bodley)
 - [#19675](https://github.com/apache/superset/pull/19675) chore(docs): Spelling (@jsoref)
 - [#19793](https://github.com/apache/superset/pull/19793) fix(SIP-68): handle empty table name during migration (@ktmud)
-- [#19786](https://github.com/apache/superset/pull/19786) fix(migrations): coalesce is_temporal  when inserting into sl_columns  (@cemremengu)
+- [#19786](https://github.com/apache/superset/pull/19786) fix(migrations): coalesce is_temporal when inserting into sl_columns (@cemremengu)
 - [#19421](https://github.com/apache/superset/pull/19421) perf: refactor SIP-68 db migrations with INSERT SELECT FROM (@ktmud)
 - [#19767](https://github.com/apache/superset/pull/19767) fix: Fix migration for removing time_range_endpoints 3 (@hughhhh)
 - [#19728](https://github.com/apache/superset/pull/19728) fix: Removetime_range_endpoints from query context object pt 2 (@hughhhh)
@@ -45,6 +45,7 @@ under the License.
 - [#18936](https://github.com/apache/superset/pull/18936) chore: Remove legacy SIP-15 interim logic/flags (@john-bodley)
 
 **Features**
+
 - [#20114](https://github.com/apache/superset/pull/20114) feat(chart): Enable caching per user when user impersonation is enabled (@Samira-El)
 - [#20408](https://github.com/apache/superset/pull/20408) feat(plugin-chart-echarts): Support stacking negative and positive values (@kgabryje)
 - [#20278](https://github.com/apache/superset/pull/20278) feat: Prevent dataset edit modal closing on click-away in edit mode (@reesercollins)
@@ -130,6 +131,7 @@ under the License.
 - [#19394](https://github.com/apache/superset/pull/19394) feat(explore): UI changes in dataset panel on Explore page (@kgabryje)
 
 **Fixes**
+
 - [#19920](https://github.com/apache/superset/pull/19920) fix(table viz): correctly sort by multiple columns in a table (@stevetracvc)
 - [#20402](https://github.com/apache/superset/pull/20402) fix: alert & reports active toggle optimistic update (@diegomedina248)
 - [#20472](https://github.com/apache/superset/pull/20472) fix: Changes the return type of get_permissions to be JSON friendly (@michael-s-molina)
@@ -144,7 +146,7 @@ under the License.
 - [#20326](https://github.com/apache/superset/pull/20326) fix(fbprophet): Fix weekly frequencies (@john-bodley)
 - [#20434](https://github.com/apache/superset/pull/20434) fix(20428): Address-Presto/Trino-Poll-Issue-Refactor (@Thelin90)
 - [#20411](https://github.com/apache/superset/pull/20411) fix(dashboard): new created chart did not have high lighted effect when using the permalink of chart share in dashboard (@diegomedina248)
-- [#20261](https://github.com/apache/superset/pull/20261) fix(embedded):  CSV download for chart (@lilykuang)
+- [#20261](https://github.com/apache/superset/pull/20261) fix(embedded): CSV download for chart (@lilykuang)
 - [#20276](https://github.com/apache/superset/pull/20276) fix(cosmetic): cannot find m-r-10 class in superset.less (@Renderz)
 - [#20420](https://github.com/apache/superset/pull/20420) fix: rm eslint-plugin-translation-vars engines requirement (@stephenLYZ)
 - [#20409](https://github.com/apache/superset/pull/20409) fix(bar-chart-v2): remove marker control from bar chart V2 (@stephenLYZ)
@@ -224,7 +226,7 @@ under the License.
 - [#19996](https://github.com/apache/superset/pull/19996) fix: Use pull_request_target in Cypress Applitools workflow (@geido)
 - [#19972](https://github.com/apache/superset/pull/19972) fix: revert chore(deps): bump d3-svg-legend in /superset-frontend (#19846) (@villebro)
 - [#19889](https://github.com/apache/superset/pull/19889) fix: Fix auto-reversion of label/title in the Metrics popover (@diegomedina248)
-- [#19903](https://github.com/apache/superset/pull/19903) fix(explore): Explore data table tooltip  (@Gwitchr)
+- [#19903](https://github.com/apache/superset/pull/19903) fix(explore): Explore data table tooltip (@Gwitchr)
 - [#19938](https://github.com/apache/superset/pull/19938) fix(chart & table): make to allow highlight in case of numeric column (@prosdev0107)
 - [#19839](https://github.com/apache/superset/pull/19839) fix(dashboard): allow users to resize the markdown widget easier (@cccs-Dustin)
 - [#19887](https://github.com/apache/superset/pull/19887) fix(hive): Workaround for Python 3.9 s3 transfer issue (@john-bodley)
@@ -283,7 +285,7 @@ under the License.
 - [#19362](https://github.com/apache/superset/pull/19362) fix(sql lab): display the 'View Results' button consistently in the history tab on sync mode (@diegomedina248)
 - [#19294](https://github.com/apache/superset/pull/19294) fix: improve alerts & reports modal on small devices (@diegomedina248)
 - [#19257](https://github.com/apache/superset/pull/19257) fix(sql lab): table selector should display all the selected tables (@diegomedina248)
-- [#19686](https://github.com/apache/superset/pull/19686) fix(plugin-chart-echarts): xAxis scale is not correct when time grain is quarter  (@stephenLYZ)
+- [#19686](https://github.com/apache/superset/pull/19686) fix(plugin-chart-echarts): xAxis scale is not correct when time grain is quarter (@stephenLYZ)
 - [#19646](https://github.com/apache/superset/pull/19646) fix(explore): Change copy of cross filters checkbox (@kgabryje)
 - [#19586](https://github.com/apache/superset/pull/19586) fix: Navbar styles and Welcome page text (@geido)
 - [#19662](https://github.com/apache/superset/pull/19662) fix(database-api): allow search for all columns (@villebro)
@@ -314,6 +316,7 @@ under the License.
 - [#19166](https://github.com/apache/superset/pull/19166) fix: time filter should be [start, end) (@zhaoyongjie)
 
 **Others**
+
 - [#20116](https://github.com/apache/superset/pull/20116) style(typo): occured -> occurred (@sfirke)
 - [#20401](https://github.com/apache/superset/pull/20401) chore: add action to welcome new users (@eschutho)
 - [#20269](https://github.com/apache/superset/pull/20269) chore(docs): Remove cache warming documentation (@ajwhite)
@@ -374,7 +377,7 @@ under the License.
 - [#20009](https://github.com/apache/superset/pull/20009) docs: typo in chart-params markdown file (@JakobMiksch)
 - [#19923](https://github.com/apache/superset/pull/19923) chore: Removes hard-coded colors from the plugins - iteration 1 (@michael-s-molina)
 - [#19954](https://github.com/apache/superset/pull/19954) chore: convert URLShortLinkButton to typescript (@ktmud)
-- [#19929](https://github.com/apache/superset/pull/19929) chore: change subject name from no_name to named for PNGs in  (@AAfghahi)
+- [#19929](https://github.com/apache/superset/pull/19929) chore: change subject name from no_name to named for PNGs in (@AAfghahi)
 - [#19942](https://github.com/apache/superset/pull/19942) refactor(ReportModal): simplify state reducer and improve error handling (@ktmud)
 - [#19770](https://github.com/apache/superset/pull/19770) chore: remove druid datasource from the config (@eschutho)
 - [#19911](https://github.com/apache/superset/pull/19911) chore: Fix broken link for DouroECI (@mavimo)
@@ -470,7 +473,7 @@ under the License.
 - [#19465](https://github.com/apache/superset/pull/19465) refactor: Removes the CSS files from the DeckGL plugin (@michael-s-molina)
 - [#19440](https://github.com/apache/superset/pull/19440) chore: Remove index.less from showSavedQuery (@geido)
 - [#19230](https://github.com/apache/superset/pull/19230) chore!: remove `ROW_LEVEL_SECURITY` feature flag (permanently enable) (@suddjian)
-- [#19361](https://github.com/apache/superset/pull/19361) chore: remove deprecated config keys and endpoints code  2.0 (@pkdotson)
+- [#19361](https://github.com/apache/superset/pull/19361) chore: remove deprecated config keys and endpoints code 2.0 (@pkdotson)
 - [#19261](https://github.com/apache/superset/pull/19261) chore: remove old alerts and configs keys (@pkdotson)
 - [#19168](https://github.com/apache/superset/pull/19168) chore: bump celery and Flask (@dpgaspar)
 - [#19049](https://github.com/apache/superset/pull/19049) chore: Remove logo forced width (@geido)
@@ -483,7 +486,7 @@ under the License.
 - [#19107](https://github.com/apache/superset/pull/19107) chore: turn on SQLLAB_BACKEND_PERSISTENCE by default (@ktmud)
 - [#19142](https://github.com/apache/superset/pull/19142) chore!: turn on Versioned Export in config.py (@AAfghahi)
 - [#19108](https://github.com/apache/superset/pull/19108) chore: Update UPDATING.md with info about flipping dnd feature flag (@kgabryje)
-- [#19146](https://github.com/apache/superset/pull/19146) chore!:  Remove  remove SQLALCHEMY_DOCS_URL and SQLALCHEMY_DISPLAY_TEXT from the config from the config  (@hughhhh)
+- [#19146](https://github.com/apache/superset/pull/19146) chore!: Remove remove SQLALCHEMY_DOCS_URL and SQLALCHEMY_DISPLAY_TEXT from the config from the config (@hughhhh)
 - [#19017](https://github.com/apache/superset/pull/19017) chore: Deprecate Python 3.7 (@john-bodley)
 - [#19113](https://github.com/apache/superset/pull/19113) chore(config): Migrating `ENABLE_JAVASCRIPT_CONTROLS` from app config to a feature flag (@rusackas)
 - [#19046](https://github.com/apache/superset/pull/19046) chore(explore): Set Drag&Drop feature flags to True by default (@kgabryje)

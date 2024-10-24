@@ -74,7 +74,6 @@ Time Series Charts now support stacking of both negative and positive values ([#
 
 - Results pane in Dashboard view now more closely mirrors rich functionality from Results pane in Explore ([#20144](https://github.com/apache/superset/pull/20144))
 
-
 **Quality of Life**
 
 - Edit Dataset modal now doesn't close when you click away ([#20278](https://github.com/apache/superset/pull/20278))
@@ -113,35 +112,41 @@ Time Series Charts now support stacking of both negative and positive values ([#
 
 - Datasets can now be filtered by their certification status ([#20136](https://github.com/apache/superset/pull/20136))
 
-
 ## Config and Feature Flags
 
 - Initial implementation of advanced types ([#18794](https://github.com/apache/superset/pull/18794))
-	- Flag: `ENABLE_ADVANCED_DATA_TYPES`
+
+  - Flag: `ENABLE_ADVANCED_DATA_TYPES`
 
 - Caching can now be enabled in database setups when user impersonation is enabled ([#20114](https://github.com/apache/superset/pull/20114))
-	- Flag: `CACHE_IMPERSONATION`
+
+  - Flag: `CACHE_IMPERSONATION`
 
 - Control behavior for how color palettes are chosen ([#19987](https://github.com/apache/superset/pull/19987))
-	- Flag: `USE_ANALAGOUS_COLORS`
+
+  - Flag: `USE_ANALAGOUS_COLORS`
 
 - Enabling non-time-series x-axis in some charts ([#20097](https://github.com/apache/superset/pull/20097))
-	- Flag: `GENERIC_CHART_AXES`
+
+  - Flag: `GENERIC_CHART_AXES`
 
 - As part of the 2.0 cleanup efforts, the following feature flags were removed (which means the behavior is now permanently enabled):
-	- `ROW_LEVEL_SECURITY`
-	- `ENABLE_REACT_CRUD_VIEWS`
-	- `PUBLIC_ROLE_LIKE_GAMMA`
+
+  - `ROW_LEVEL_SECURITY`
+  - `ENABLE_REACT_CRUD_VIEWS`
+  - `PUBLIC_ROLE_LIKE_GAMMA`
 
 - The following feature flags are now True by default, but can be turned back to False:
-	- `ENABLE_EXPLORE_DRAG_AND_DROP`
-	- `ENABLE_DND_WITH_CLICK_UX`
-	- `DISABLE_LEGACY_DATASOURCE_EDITOR`
-	- `SQLLAB_BACKEND_PERSISTENCE`
-	- `VERSIONED_EXPORT`
+
+  - `ENABLE_EXPLORE_DRAG_AND_DROP`
+  - `ENABLE_DND_WITH_CLICK_UX`
+  - `DISABLE_LEGACY_DATASOURCE_EDITOR`
+  - `SQLLAB_BACKEND_PERSISTENCE`
+  - `VERSIONED_EXPORT`
 
 - The following config flags were removed:
-	- `APP_ICON_WIDTH`
+
+  - `APP_ICON_WIDTH`
 
 - A number of legacy interim flags were removed around SIP-15 ([#18936](https://github.com/apache/superset/pull/18936))
 

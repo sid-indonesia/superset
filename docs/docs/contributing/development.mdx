@@ -3,6 +3,7 @@ title: Setting up a Development Environment
 sidebar_position: 3
 version: 1
 ---
+
 # Setting up a Development Environment
 
 The documentation in this section is a bit of a patchwork of knowledge representing the
@@ -434,7 +435,7 @@ If you want to use the same flag in the client code, also add it to the FeatureF
 
 ```typescript
 export enum FeatureFlag {
-  SCOPED_FILTER = "SCOPED_FILTER",
+  SCOPED_FILTER = 'SCOPED_FILTER',
 }
 ```
 
@@ -768,9 +769,9 @@ VSCode will not stop on breakpoints right away. We've attached to PID 6 however 
 To debug Flask running in POD inside a kubernetes cluster, you'll need to make sure the pod runs as root and is granted the SYS_TRACE capability.These settings should not be used in production environments.
 
 ```yaml
-  securityContext:
-    capabilities:
-      add: ["SYS_PTRACE"]
+securityContext:
+  capabilities:
+    add: ['SYS_PTRACE']
 ```
 
 See (set capabilities for a container)[https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-capabilities-for-a-container] for more details.

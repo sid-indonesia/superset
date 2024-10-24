@@ -42,7 +42,7 @@ params:
     sqlExpression: null
   queryFields:
     metric: metrics
-  subheader: ''
+  subheader: ""
   subheader_font_size: 0.15
   time_range: No filter
   url_params: {}

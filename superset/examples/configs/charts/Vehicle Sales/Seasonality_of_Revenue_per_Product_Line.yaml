@@ -21,34 +21,34 @@ params:
   datasource: 23__table
   granularity_sqla: order_date
   groupby:
-  - product_line
+    - product_line
   horizon_color_scale: series
   metrics:
-  - aggregate: SUM
-    column:
-      column_name: sales
-      description: null
-      expression: null
-      filterable: true
-      groupby: true
-      id: 917
-      is_dttm: false
-      optionName: _col_Sales
-      python_date_format: null
-      type: DOUBLE PRECISION
-      verbose_name: null
-    expressionType: SIMPLE
-    hasCustomLabel: false
-    isNew: false
-    label: (Sales)
-    optionName: metric_e3kxby3hnjs_nfd4adbcnsn
-    sqlExpression: null
+    - aggregate: SUM
+      column:
+        column_name: sales
+        description: null
+        expression: null
+        filterable: true
+        groupby: true
+        id: 917
+        is_dttm: false
+        optionName: _col_Sales
+        python_date_format: null
+        type: DOUBLE PRECISION
+        verbose_name: null
+      expressionType: SIMPLE
+      hasCustomLabel: false
+      isNew: false
+      label: (Sales)
+      optionName: metric_e3kxby3hnjs_nfd4adbcnsn
+      sqlExpression: null
   order_desc: true
   queryFields:
     groupby: groupby
     metrics: metrics
   row_limit: null
-  series_height: '25'
+  series_height: "25"
   slice_id: 2811
   time_range: No filter
   url_params: {}

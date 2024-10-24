@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-/* eslint-disable camelcase */
+
 import { invert } from 'lodash';
 import {
   AnnotationLayer,
@@ -105,7 +105,7 @@ import {
   getXAxisFormatter,
   getYAxisFormatter,
 } from '../utils/formatters';
-
+import { xAxisTitleFontSizeControl } from '../controls';
 export default function transformProps(
   chartProps: EchartsTimeseriesChartProps,
 ): TimeseriesChartTransformedProps {
@@ -473,16 +473,24 @@ export default function transformProps(
     )
     .map(entry => entry.name || '')
     .concat(extractAnnotationLabels(annotationLayers, annotationData));
-
+  // xAxis sudah dideklarasikan sejak awal, yang akan diubah adalah key nameTextStyle
   let xAxis: any = {
     type: xAxisType,
     name: xAxisTitle,
     nameGap: convertInteger(xAxisTitleMargin),
     nameLocation: 'middle',
+    nameTextStyle: {
+      color: '#000000',
+      fontSize: convertInteger(xAxisTitleFontSizeControl.config.default), // code untuk menambahkan fitur dropdown pemilihan size X dan Y label di tampilan Superset
+    },
+    // axisLabel juga dilakukan modifikasi, tapi untuk mengatur nilai default saja
     axisLabel: {
       hideOverlap: true,
       formatter: xAxisFormatter,
       rotate: xAxisLabelRotation,
+      interval: 0, // value yang ditambahkan
+      color: '#000000', // value yang ditambahkan
+      fontSize: 24, // value yang ditambahkan
     },
     minorTick: { show: minorTicks },
     minInterval:
@@ -590,7 +598,7 @@ export default function transformProps(
         });
         if (stack) {
           rows.reverse();
-          if (focusedRow !== undefined) {
+          if (focusedRow) {
             focusedRow = rows.length - focusedRow - 1;
           }
         }

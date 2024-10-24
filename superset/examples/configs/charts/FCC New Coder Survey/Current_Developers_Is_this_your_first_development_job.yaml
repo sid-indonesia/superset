@@ -14,19 +14,19 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-slice_name: 'Current Developers: Is this your first development job?'
+slice_name: "Current Developers: Is this your first development job?"
 viz_type: big_number_total
 params:
   adhoc_filters:
-  - clause: WHERE
-    comparator: Currently A Developer
-    expressionType: SIMPLE
-    filterOptionName: filter_fvi0jg9aii_2lekqrhy7qk
-    isExtra: false
-    isNew: false
-    operator: ==
-    sqlExpression: null
-    subject: developer_type
+    - clause: WHERE
+      comparator: Currently A Developer
+      expressionType: SIMPLE
+      filterOptionName: filter_fvi0jg9aii_2lekqrhy7qk
+      isExtra: false
+      isNew: false
+      operator: ==
+      sqlExpression: null
+      subject: developer_type
   datasource: 42__table
   granularity_sqla: time_start
   header_font_size: 0.4

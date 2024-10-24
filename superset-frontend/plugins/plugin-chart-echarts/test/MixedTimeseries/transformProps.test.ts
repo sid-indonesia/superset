@@ -81,6 +81,15 @@ const formData: EchartsMixedTimeseriesFormData = {
   forecastPeriods: [],
   forecastInterval: 0,
   forecastSeasonalityDaily: 0,
+  // Properti tambahan yang diperlukan:
+  xAxisTitleColor: '#000000',
+  xAxisTitleFontSize: 12,
+  xAxisTitleAlign: 'center',
+  xAxisTitleVAlign: 'middle',
+  yAxisTitleColor: '#000000',
+  yAxisTitleFontSize: 12,
+  yAxisTitleAlign: 'center',
+  yAxisTitleVAlign: 'middle',
 };
 
 const queriesData = [

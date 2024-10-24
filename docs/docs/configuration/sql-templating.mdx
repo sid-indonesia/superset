@@ -74,10 +74,11 @@ In the UI you can assign a set of parameters as JSON
   "my_table": "foo"
 }
 ```
+
 The parameters become available in your SQL (example: `SELECT * FROM {{ my_table }}` ) by using Jinja templating syntax.
 SQL Lab template parameters are stored with the dataset as `TEMPLATE PARAMETERS`.
 
-There is a special ``_filters`` parameter which can be used to test filters used in the jinja template.
+There is a special `_filters` parameter which can be used to test filters used in the jinja template.
 
 ```json
 {
@@ -98,8 +99,7 @@ WHERE action in {{ filter_values('action_type')|where_in }}
 GROUP BY action
 ```
 
-Note ``_filters`` is not stored with the dataset. It's only used within the SQL Lab UI.
-
+Note `_filters` is not stored with the dataset. It's only used within the SQL Lab UI.
 
 Besides default Jinja templating, SQL lab also supports self-defined template processor by setting
 the `CUSTOM_TEMPLATE_PROCESSORS` in your superset configuration. The values in this dictionary
@@ -354,10 +354,11 @@ considerably improve performance, as many databases and query engines are able t
 if the temporal filter is placed on the inner query, as opposed to the outer query.
 
 The macro takes the following parameters:
+
 - `column`: Name of the temporal column. Leave undefined to reference the time range from a Dashboard Native Time Range
   filter (when present).
 - `default`: The default value to fall back to if the time filter is not present, or has the value `No filter`
-- `target_type`: The target temporal type as recognized by the target  database (e.g. `TIMESTAMP`, `DATE` or
+- `target_type`: The target temporal type as recognized by the target database (e.g. `TIMESTAMP`, `DATE` or
   `DATETIME`). If `column` is defined, the format will default to the type of the column. This is used to produce
   the format of the `from_expr` and `to_expr` properties of the returned `TimeFilter` object.
 - `strftime`: format using the `strftime` method of `datetime` for custom time formatting.
@@ -367,6 +368,7 @@ The macro takes the following parameters:
   filter should only apply to the inner query.
 
 The return type has the following properties:
+
 - `from_expr`: the start of the time filter (if any)
 - `to_expr`: the end of the time filter (if any)
 - `time_range`: The applied time range
@@ -407,6 +409,7 @@ LIMIT 1000;
 
 When using the `default` parameter, the templated query can be simplified, as the endpoints will always be defined
 (to use a fixed time range, you can also use something like `default="2024-08-27 : 2024-09-03"`)
+
 ```
 {% set time_filter = get_time_filter("dttm", default="Last week", remove_filter=True) %}
 SELECT

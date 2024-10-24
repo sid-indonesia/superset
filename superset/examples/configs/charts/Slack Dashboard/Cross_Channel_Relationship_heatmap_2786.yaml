@@ -57,8 +57,8 @@ params:
   viz_type: heatmap
   xscale_interval: null
   y_axis_bounds:
-  - null
-  - null
+    - null
+    - null
   y_axis_format: SMART_NUMBER
   yscale_interval: null
 cache_timeout: null

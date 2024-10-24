@@ -4,6 +4,7 @@ hide_title: true
 sidebar_position: 1
 version: 1
 ---
+
 # Connecting to Databases
 
 Superset does not ship bundled with connectivity to databases. The main step in connecting
@@ -31,55 +32,55 @@ install new database drivers into your Superset configuration.
 
 ### Supported Databases and Dependencies
 
-
 Some of the recommended packages are shown below. Please refer to
 [pyproject.toml](https://github.com/apache/superset/blob/master/pyproject.toml) for the versions that
 are compatible with Superset.
 
-| <div style={{width: '150px'}}>Database</div>                   | PyPI package                                                                       | Connection String                                                                                                                                      |
-| --------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [AWS Athena](/docs/configuration/databases#aws-athena)                   | `pip install pyathena[pandas]` , `pip install PyAthenaJDBC`                        | `awsathena+rest://{access_key_id}:{access_key}@athena.{region}.amazonaws.com/{schema}?s3_staging_dir={s3_staging_dir}&... `   |
-| [AWS DynamoDB](/docs/configuration/databases#aws-dynamodb)               | `pip install pydynamodb`                                                           | `dynamodb://{access_key_id}:{secret_access_key}@dynamodb.{region_name}.amazonaws.com?connector=superset`                                               |
-| [AWS Redshift](/docs/configuration/databases#aws-redshift)               | `pip install sqlalchemy-redshift`                                                  | ` redshift+psycopg2://<userName>:<DBPassword>@<AWS End Point>:5439/<Database Name>`                                                                    |
-| [Apache Doris](/docs/configuration/databases#apache-doris)                     | `pip install pydoris`                                                              | `doris://<User>:<Password>@<Host>:<Port>/<Catalog>.<Database>`                                            |
-| [Apache Drill](/docs/configuration/databases#apache-drill)                     | `pip install sqlalchemy-drill`                                                     | `drill+sadrill:// For JDBC drill+jdbc://`                                                                                                              |
-| [Apache Druid](/docs/configuration/databases#apache-druid)                     | `pip install pydruid`                                                              | `druid://<User>:<password>@<Host>:<Port-default-9088>/druid/v2/sql`                                                                                    |
-| [Apache Hive](/docs/configuration/databases#hive)                       | `pip install pyhive`                                                               | `hive://hive@{hostname}:{port}/{database}`                                                                                                             |
-| [Apache Impala](/docs/configuration/databases#apache-impala)                   | `pip install impyla`                                                               | `impala://{hostname}:{port}/{database}`                                                                                                                |
-| [Apache Kylin](/docs/configuration/databases#apache-kylin)                     | `pip install kylinpy`                                                              | `kylin://<username>:<password>@<hostname>:<port>/<project>?<param1>=<value1>&<param2>=<value2>`                                                        |
-| [Apache Pinot](/docs/configuration/databases#apache-pinot)                     | `pip install pinotdb`                                                              | `pinot://BROKER:5436/query?server=http://CONTROLLER:5983/`                                                                                             |
-| [Apache Solr](/docs/configuration/databases#apache-solr)                       | `pip install sqlalchemy-solr`                                                      | `solr://{username}:{password}@{hostname}:{port}/{server_path}/{collection}`                                                                            |
-| [Apache Spark SQL](/docs/configuration/databases#apache-spark-sql)             | `pip install pyhive`                                                               | `hive://hive@{hostname}:{port}/{database}`                                                                                                             |
-| [Ascend.io](/docs/configuration/databases#ascendio)                       | `pip install impyla`                                                               | `ascend://{username}:{password}@{hostname}:{port}/{database}?auth_mechanism=PLAIN;use_ssl=true`                                                        |
-| [Azure MS SQL](/docs/configuration/databases#sql-server)                | `pip install pymssql`                                                              | `mssql+pymssql://UserName@presetSQL:TestPassword@presetSQL.database.windows.net:1433/TestSchema`                                                       |
-| [ClickHouse](/docs/configuration/databases#clickhouse)                  | `pip install clickhouse-connect`                                                   | `clickhousedb://{username}:{password}@{hostname}:{port}/{database}`                                                                                    |
-| [CockroachDB](/docs/configuration/databases#cockroachdb)                | `pip install cockroachdb`                                                          | `cockroachdb://root@{hostname}:{port}/{database}?sslmode=disable`                                                                                      |
-| [Couchbase](/docs/configuration/databases#couchbase)                | `pip install couchbase-sqlalchemy`                                                          | `couchbase://{username}:{password}@{hostname}:{port}?truststorepath={ssl certificate path}`                                                                                      |
-| [Dremio](/docs/configuration/databases#dremio)                          | `pip install sqlalchemy_dremio`                                                    |`dremio+flight://{username}:{password}@{host}:32010`, often useful: `?UseEncryption=true/false`. For Legacy ODBC: `dremio+pyodbc://{username}:{password}@{host}:31010`                                                                                                                           |
-| [Elasticsearch](/docs/configuration/databases#elasticsearch)            | `pip install elasticsearch-dbapi`                                                  | `elasticsearch+http://{user}:{password}@{host}:9200/`                                                                                                  |
-| [Exasol](/docs/configuration/databases#exasol)                          | `pip install sqlalchemy-exasol`                                                    | `exa+pyodbc://{username}:{password}@{hostname}:{port}/my_schema?CONNECTIONLCALL=en_US.UTF-8&driver=EXAODBC`                                            |
-| [Google BigQuery](/docs/configuration/databases#google-bigquery)                     | `pip install sqlalchemy-bigquery`                                                  | `bigquery://{project_id}`                                                                                                                              |
-| [Google Sheets](/docs/configuration/databases#google-sheets)            | `pip install shillelagh[gsheetsapi]`                                               | `gsheets://`                                                                                                                                           |
-| [Firebolt](/docs/configuration/databases#firebolt)                      | `pip install firebolt-sqlalchemy`                                                  | `firebolt://{client_id}:{client_secret}@{database}/{engine_name}?account_name={name}`                                                                  |
-| [Hologres](/docs/configuration/databases#hologres)                      | `pip install psycopg2`                                                             | `postgresql+psycopg2://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                        |
-| [IBM Db2](/docs/configuration/databases#ibm-db2)                        | `pip install ibm_db_sa`                                                            | `db2+ibm_db://`                                                                                                                                        |
-| [IBM Netezza Performance Server](/docs/configuration/databases#ibm-netezza-performance-server) | `pip install nzalchemy`                                                            | `netezza+nzpy://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                               |
-| [MySQL](/docs/configuration/databases#mysql)                            | `pip install mysqlclient`                                                          | `mysql://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                                      |
-| [OceanBase](/docs/configuration/databases#oceanbase)                    | `pip install oceanbase_py`                                                         | `oceanbase://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                                      |
-| [Oracle](/docs/configuration/databases#oracle)                          | `pip install cx_Oracle`                                                            | `oracle://`                                                                                                                                            |
-| [PostgreSQL](/docs/configuration/databases#postgres)                    | `pip install psycopg2`                                                             | `postgresql://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                                 |
-| [Presto](/docs/configuration/databases#presto)                          | `pip install pyhive`                                                               | `presto://`                                                                                                                                            |
-| [Rockset](/docs/configuration/databases#rockset)                        | `pip install rockset-sqlalchemy`                                                   | `rockset://<api_key>:@<api_server>`                                                                                                                    |
-| [SAP Hana](/docs/configuration/databases#hana)                          | `pip install hdbcli sqlalchemy-hana` or `pip install apache-superset[hana]`          | `hana://{username}:{password}@{host}:{port}`                                                                                                           |
-| [StarRocks](/docs/configuration/databases#starrocks)                    | `pip install starrocks`                                                            | `starrocks://<User>:<Password>@<Host>:<Port>/<Catalog>.<Database>`                                                                                     |
-| [Snowflake](/docs/configuration/databases#snowflake)                    | `pip install snowflake-sqlalchemy`                                                 | `snowflake://{user}:{password}@{account}.{region}/{database}?role={role}&warehouse={warehouse}`                                                        |
-| SQLite                                                    | No additional library needed                                                       | `sqlite://path/to/file.db?check_same_thread=false`                                                                                                     |
-| [SQL Server](/docs/configuration/databases#sql-server)                  | `pip install pymssql`                                                              | `mssql+pymssql://`                                                                                                                                     |
-| [Teradata](/docs/configuration/databases#teradata)                      | `pip install teradatasqlalchemy`                                                   | `teradatasql://{user}:{password}@{host}`                                                                                                               |
-| [TimescaleDB](/docs/configuration/databases#timescaledb)                | `pip install psycopg2`                                                             | `postgresql://<UserName>:<DBPassword>@<Database Host>:<Port>/<Database Name>`                                                                          |
-| [Trino](/docs/configuration/databases#trino)                            | `pip install trino`                                                                | `trino://{username}:{password}@{hostname}:{port}/{catalog}`                                                                                            |
-| [Vertica](/docs/configuration/databases#vertica)                        | `pip install sqlalchemy-vertica-python`                                            | `vertica+vertica_python://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                     |
-| [YugabyteDB](/docs/configuration/databases#yugabytedb)                  | `pip install psycopg2`                                                             | `postgresql://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                                 |
+| <div style={{width: '150px'}}>Database</div>                                                   | PyPI package                                                                | Connection String                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [AWS Athena](/docs/configuration/databases#aws-athena)                                         | `pip install pyathena[pandas]` , `pip install PyAthenaJDBC`                 | `awsathena+rest://{access_key_id}:{access_key}@athena.{region}.amazonaws.com/{schema}?s3_staging_dir={s3_staging_dir}&... `                                            |
+| [AWS DynamoDB](/docs/configuration/databases#aws-dynamodb)                                     | `pip install pydynamodb`                                                    | `dynamodb://{access_key_id}:{secret_access_key}@dynamodb.{region_name}.amazonaws.com?connector=superset`                                                               |
+| [AWS Redshift](/docs/configuration/databases#aws-redshift)                                     | `pip install sqlalchemy-redshift`                                           | ` redshift+psycopg2://<userName>:<DBPassword>@<AWS End Point>:5439/<Database Name>`                                                                                    |
+| [Apache Doris](/docs/configuration/databases#apache-doris)                                     | `pip install pydoris`                                                       | `doris://<User>:<Password>@<Host>:<Port>/<Catalog>.<Database>`                                                                                                         |
+| [Apache Drill](/docs/configuration/databases#apache-drill)                                     | `pip install sqlalchemy-drill`                                              | `drill+sadrill:// For JDBC drill+jdbc://`                                                                                                                              |
+| [Apache Druid](/docs/configuration/databases#apache-druid)                                     | `pip install pydruid`                                                       | `druid://<User>:<password>@<Host>:<Port-default-9088>/druid/v2/sql`                                                                                                    |
+| [Apache Hive](/docs/configuration/databases#hive)                                              | `pip install pyhive`                                                        | `hive://hive@{hostname}:{port}/{database}`                                                                                                                             |
+| [Apache Impala](/docs/configuration/databases#apache-impala)                                   | `pip install impyla`                                                        | `impala://{hostname}:{port}/{database}`                                                                                                                                |
+| [Apache Kylin](/docs/configuration/databases#apache-kylin)                                     | `pip install kylinpy`                                                       | `kylin://<username>:<password>@<hostname>:<port>/<project>?<param1>=<value1>&<param2>=<value2>`                                                                        |
+| [Apache Pinot](/docs/configuration/databases#apache-pinot)                                     | `pip install pinotdb`                                                       | `pinot://BROKER:5436/query?server=http://CONTROLLER:5983/`                                                                                                             |
+| [Apache Solr](/docs/configuration/databases#apache-solr)                                       | `pip install sqlalchemy-solr`                                               | `solr://{username}:{password}@{hostname}:{port}/{server_path}/{collection}`                                                                                            |
+| [Apache Spark SQL](/docs/configuration/databases#apache-spark-sql)                             | `pip install pyhive`                                                        | `hive://hive@{hostname}:{port}/{database}`                                                                                                                             |
+| [Ascend.io](/docs/configuration/databases#ascendio)                                            | `pip install impyla`                                                        | `ascend://{username}:{password}@{hostname}:{port}/{database}?auth_mechanism=PLAIN;use_ssl=true`                                                                        |
+| [Azure MS SQL](/docs/configuration/databases#sql-server)                                       | `pip install pymssql`                                                       | `mssql+pymssql://UserName@presetSQL:TestPassword@presetSQL.database.windows.net:1433/TestSchema`                                                                       |
+| [ClickHouse](/docs/configuration/databases#clickhouse)                                         | `pip install clickhouse-connect`                                            | `clickhousedb://{username}:{password}@{hostname}:{port}/{database}`                                                                                                    |
+| [CockroachDB](/docs/configuration/databases#cockroachdb)                                       | `pip install cockroachdb`                                                   | `cockroachdb://root@{hostname}:{port}/{database}?sslmode=disable`                                                                                                      |
+| [Couchbase](/docs/configuration/databases#couchbase)                                           | `pip install couchbase-sqlalchemy`                                          | `couchbase://{username}:{password}@{hostname}:{port}?truststorepath={ssl certificate path}`                                                                            |
+| [Dremio](/docs/configuration/databases#dremio)                                                 | `pip install sqlalchemy_dremio`                                             | `dremio+flight://{username}:{password}@{host}:32010`, often useful: `?UseEncryption=true/false`. For Legacy ODBC: `dremio+pyodbc://{username}:{password}@{host}:31010` |
+| [Elasticsearch](/docs/configuration/databases#elasticsearch)                                   | `pip install elasticsearch-dbapi`                                           | `elasticsearch+http://{user}:{password}@{host}:9200/`                                                                                                                  |
+| [Exasol](/docs/configuration/databases#exasol)                                                 | `pip install sqlalchemy-exasol`                                             | `exa+pyodbc://{username}:{password}@{hostname}:{port}/my_schema?CONNECTIONLCALL=en_US.UTF-8&driver=EXAODBC`                                                            |
+| [Google BigQuery](/docs/configuration/databases#google-bigquery)                               | `pip install sqlalchemy-bigquery`                                           | `bigquery://{project_id}`                                                                                                                                              |
+| [Google Sheets](/docs/configuration/databases#google-sheets)                                   | `pip install shillelagh[gsheetsapi]`                                        | `gsheets://`                                                                                                                                                           |
+| [Firebolt](/docs/configuration/databases#firebolt)                                             | `pip install firebolt-sqlalchemy`                                           | `firebolt://{client_id}:{client_secret}@{database}/{engine_name}?account_name={name}`                                                                                  |
+| [Hologres](/docs/configuration/databases#hologres)                                             | `pip install psycopg2`                                                      | `postgresql+psycopg2://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                                        |
+| [IBM Db2](/docs/configuration/databases#ibm-db2)                                               | `pip install ibm_db_sa`                                                     | `db2+ibm_db://`                                                                                                                                                        |
+| [IBM Netezza Performance Server](/docs/configuration/databases#ibm-netezza-performance-server) | `pip install nzalchemy`                                                     | `netezza+nzpy://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                                               |
+| [MySQL](/docs/configuration/databases#mysql)                                                   | `pip install mysqlclient`                                                   | `mysql://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                                                      |
+| [OceanBase](/docs/configuration/databases#oceanbase)                                           | `pip install oceanbase_py`                                                  | `oceanbase://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                                                  |
+| [Oracle](/docs/configuration/databases#oracle)                                                 | `pip install cx_Oracle`                                                     | `oracle://`                                                                                                                                                            |
+| [PostgreSQL](/docs/configuration/databases#postgres)                                           | `pip install psycopg2`                                                      | `postgresql://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                                                 |
+| [Presto](/docs/configuration/databases#presto)                                                 | `pip install pyhive`                                                        | `presto://`                                                                                                                                                            |
+| [Rockset](/docs/configuration/databases#rockset)                                               | `pip install rockset-sqlalchemy`                                            | `rockset://<api_key>:@<api_server>`                                                                                                                                    |
+| [SAP Hana](/docs/configuration/databases#hana)                                                 | `pip install hdbcli sqlalchemy-hana` or `pip install apache-superset[hana]` | `hana://{username}:{password}@{host}:{port}`                                                                                                                           |
+| [StarRocks](/docs/configuration/databases#starrocks)                                           | `pip install starrocks`                                                     | `starrocks://<User>:<Password>@<Host>:<Port>/<Catalog>.<Database>`                                                                                                     |
+| [Snowflake](/docs/configuration/databases#snowflake)                                           | `pip install snowflake-sqlalchemy`                                          | `snowflake://{user}:{password}@{account}.{region}/{database}?role={role}&warehouse={warehouse}`                                                                        |
+| SQLite                                                                                         | No additional library needed                                                | `sqlite://path/to/file.db?check_same_thread=false`                                                                                                                     |
+| [SQL Server](/docs/configuration/databases#sql-server)                                         | `pip install pymssql`                                                       | `mssql+pymssql://`                                                                                                                                                     |
+| [Teradata](/docs/configuration/databases#teradata)                                             | `pip install teradatasqlalchemy`                                            | `teradatasql://{user}:{password}@{host}`                                                                                                                               |
+| [TimescaleDB](/docs/configuration/databases#timescaledb)                                       | `pip install psycopg2`                                                      | `postgresql://<UserName>:<DBPassword>@<Database Host>:<Port>/<Database Name>`                                                                                          |
+| [Trino](/docs/configuration/databases#trino)                                                   | `pip install trino`                                                         | `trino://{username}:{password}@{hostname}:{port}/{catalog}`                                                                                                            |
+| [Vertica](/docs/configuration/databases#vertica)                                               | `pip install sqlalchemy-vertica-python`                                     | `vertica+vertica_python://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                                     |
+| [YugabyteDB](/docs/configuration/databases#yugabytedb)                                         | `pip install psycopg2`                                                      | `postgresql://<UserName>:<DBPassword>@<Database Host>/<Database Name>`                                                                                                 |
+
 ---
 
 Note that many other databases are supported, the main criteria being the existence of a functional
@@ -128,7 +129,7 @@ exists in the directory with your `docker-compose.yml` or `docker-compose-non-de
 touch ./docker/requirements-local.txt
 ```
 
-Add the driver identified in step above.  You can use a text editor or do
+Add the driver identified in step above. You can use a text editor or do
 it from the command line like:
 
 ```bash
@@ -140,7 +141,7 @@ Launch Superset with `docker compose -f docker-compose-non-dev.yml up` and
 the driver should be present.
 
 You can check its presence by entering the running container with
-`docker exec -it <container_name> bash` and running `pip freeze`.  The PyPI package should
+`docker exec -it <container_name> bash` and running `pip freeze`. The PyPI package should
 be present in the printed list.
 
 **If you're running a customized docker image**, rebuild your local image with the new
@@ -163,7 +164,7 @@ From there, follow the steps on the
 [Using Database Connection UI page](/docs/configuration/databases#connecting-through-the-ui).
 
 Consult the page for your specific database type in the Superset documentation to determine
-the connection string and any other parameters you need to input.  For instance,
+the connection string and any other parameters you need to input. For instance,
 on the [MySQL page](/docs/configuration/databases#mysql), we see that the connection string
 to a local MySQL database differs depending on whether the setup is running on Linux or Mac.
 
@@ -172,14 +173,13 @@ Click the “Test Connection” button, which should result in a popup message s
 
 #### 4. Troubleshooting
 
-If the test fails, review your docker logs for error messages.  Superset uses SQLAlchemy
+If the test fails, review your docker logs for error messages. Superset uses SQLAlchemy
 to connect to databases; to troubleshoot the connection string for your database, you might
 start Python in the Superset application container or host environment and try to connect
 directly to the desired database and fetch data. This eliminates Superset for the
 purposes of isolating the problem.
 
 Repeat this process for each type of database you want Superset to connect to.
-
 
 ### Database-specific Instructions
 
@@ -206,13 +206,11 @@ You'll need the following setting values to form the connection string:
 - **Catalog**: Catalog Name
 - **Database**: Database Name
 
-
 Here's what the connection string looks like:
 
 ```
 doris://<User>:<Password>@<Host>:<Port>/<Catalog>.<Database>
 ```
-
 
 #### AWS Athena
 
@@ -243,11 +241,12 @@ awsathena+rest://{aws_access_key_id}:{aws_secret_access_key}@athena.{region_name
 ```
 
 The PyAthena library also allows to assume a specific IAM role which you can define by adding following parameters in Superset's Athena database connection UI under ADVANCED --> Other --> ENGINE PARAMETERS.
+
 ```json
 {
-    "connect_args": {
-        "role_arn": "<role arn>"
-    }
+  "connect_args": {
+    "role_arn": "<role arn>"
+  }
 }
 ```
 
@@ -265,7 +264,6 @@ dynamodb://{aws_access_key_id}:{aws_secret_access_key}@dynamodb.{region_name}.am
 
 To get more documentation, please visit: [PyDynamoDB WIKI](https://github.com/passren/PyDynamoDB/wiki/5.-Superset).
 
-
 #### AWS Redshift
 
 The [sqlalchemy-redshift](https://pypi.org/project/sqlalchemy-redshift/) library is the recommended
@@ -281,7 +279,6 @@ You'll need to set the following values to form the connection string:
 - **Database Name**: Database Name
 - **Port**: default 5439
 
-
 ##### psycopg2
 
 Here's what the SQLALCHEMY URI looks like:
@@ -290,7 +287,6 @@ Here's what the SQLALCHEMY URI looks like:
 redshift+psycopg2://<userName>:<DBPassword>@<AWS End Point>:5439/<Database Name>
 ```
 
-
 ##### redshift_connector
 
 Here's what the SQLALCHEMY URI looks like:
@@ -298,7 +294,6 @@ Here's what the SQLALCHEMY URI looks like:
 ```
 redshift+redshift_connector://<userName>:<DBPassword>@<AWS End Point>:5439/<Database Name>
 ```
-
 
 ###### Using IAM-based credentials with Redshift cluster:
 
@@ -311,8 +306,8 @@ You have to define the following arguments in Superset's redshift database conne
 ```
 {"connect_args":{"iam":true,"database":"<database>","cluster_identifier":"<cluster_identifier>","db_user":"<db_user>"}}
 ```
-and SQLALCHEMY URI should be set to `redshift+redshift_connector://`
 
+and SQLALCHEMY URI should be set to `redshift+redshift_connector://`
 
 ###### Using IAM-based credentials with Redshift serverless:
 
@@ -325,8 +320,6 @@ You have to define the following arguments in Superset's redshift database conne
 ```
 {"connect_args":{"iam":true,"is_serverless":true,"serverless_acct_id":"<aws account number>","serverless_work_group":"<redshift work group>","database":"<database>","user":"IAMR:<superset iam role name>"}}
 ```
-
-
 
 #### ClickHouse
 
@@ -360,8 +353,6 @@ uses the default user without a password (and doesn't encrypt the connection):
 clickhousedb://localhost/default
 ```
 
-
-
 #### CockroachDB
 
 The recommended connector library for CockroachDB is
@@ -373,13 +364,12 @@ The expected connection string is formatted as follows:
 cockroachdb://root@{hostname}:{port}/{database}?sslmode=disable
 ```
 
-
-
 #### Couchbase
 
 The Couchbase's Superset connection is designed to support two services: Couchbase Analytics and Couchbase Columnar.
 The recommended connector library for couchbase is
 [couchbase-sqlalchemy](https://github.com/couchbase/couchbase-sqlalchemy).
+
 ```
 pip install couchbase-sqlalchemy
 ```
@@ -389,7 +379,6 @@ The expected connection string is formatted as follows:
 ```
 couchbase://{username}:{password}@{hostname}:{port}?truststorepath={certificate path}?ssl={true/false}
 ```
-
 
 #### CrateDB
 
@@ -409,7 +398,6 @@ The expected connection string is formatted as follows:
 crate://crate@127.0.0.1:4200
 ```
 
-
 #### Databend
 
 The recommended connector library for Databend is [databend-sqlalchemy](https://pypi.org/project/databend-sqlalchemy/).
@@ -426,7 +414,6 @@ Here's a connection string example of Superset connecting to a Databend database
 ```
 databend://user:password@localhost:8000/default?secure=false
 ```
-
 
 #### Databricks
 
@@ -456,7 +443,7 @@ You also need to add the following configuration to "Other" -> "Engine Parameter
 
 ```json
 {
-    "connect_args": {"http_path": "sql/protocolv1/o/****"}
+  "connect_args": { "http_path": "sql/protocolv1/o/****" }
 }
 ```
 
@@ -481,7 +468,7 @@ databricks+pyhive://token:{access_token}@{server_hostname}:{port}/{database_name
 You also need to add the following configuration to "Other" -> "Engine Parameters", with your HTTP path:
 
 ```json
-{"connect_args": {"http_path": "sql/protocolv1/o/****"}}
+{ "connect_args": { "http_path": "sql/protocolv1/o/****" } }
 ```
 
 #### ODBC
@@ -497,7 +484,12 @@ databricks+pyodbc://token:{access_token}@{server_hostname}:{port}/{database_name
 And for the connection arguments:
 
 ```json
-{"connect_args": {"http_path": "sql/protocolv1/o/****", "driver_path": "/path/to/odbc/driver"}}
+{
+  "connect_args": {
+    "http_path": "sql/protocolv1/o/****",
+    "driver_path": "/path/to/odbc/driver"
+  }
+}
 ```
 
 The driver path should be:
@@ -508,11 +500,13 @@ The driver path should be:
 For a connection to a SQL endpoint you need to use the HTTP path from the endpoint:
 
 ```json
-{"connect_args": {"http_path": "/sql/1.0/endpoints/****", "driver_path": "/path/to/odbc/driver"}}
+{
+  "connect_args": {
+    "http_path": "/sql/1.0/endpoints/****",
+    "driver_path": "/path/to/odbc/driver"
+  }
+}
 ```
-
-
-
 
 #### Dremio
 
@@ -533,7 +527,6 @@ dremio+flight://{username}:{password}@{host}:{port}/dremio
 
 This [blog post by Dremio](https://www.dremio.com/tutorials/dremio-apache-superset/) has some
 additional helpful instructions on connecting Superset to Dremio.
-
 
 #### Apache Drill
 
@@ -576,9 +569,7 @@ We recommend reading the
 the [GitHub README](https://github.com/JohnOmernik/sqlalchemy-drill#usage-with-odbc) to learn how to
 work with Drill through ODBC.
 
-
-
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 #### Apache Druid
 
@@ -591,6 +582,7 @@ The connection string looks like:
 ```
 druid://<User>:<password>@<Host>:<Port-default-9088>/druid/v2/sql
 ```
+
 Here's a breakdown of the key components of this connection string:
 
 - `User`: username portion of the credentials needed to connect to your database
@@ -608,7 +600,7 @@ When adding a connection to Druid, you can customize the connection a few differ
 You can add certificates in the **Root Certificate** field when configuring the new database
 connection to Druid:
 
-<img src={useBaseUrl("/img/root-cert-example.png")} />{" "}
+<img src={useBaseUrl('/img/root-cert-example.png')} />{' '}
 
 When using a custom certificate, pydruid will automatically use https scheme.
 
@@ -642,7 +634,6 @@ Druid supports post aggregation and this works in Superset. All you have to do i
 much like you would create an aggregation manually, but specify `postagg` as a `Metric Type`. You
 then have to provide a valid json post-aggregation definition (as specified in the Druid docs) in
 the JSON field.
-
 
 #### Elasticsearch
 
@@ -714,8 +705,6 @@ To disable SSL verification, add the following to the **SQLALCHEMY URI** field:
 elasticsearch+https://{user}:{password}@{host}:9200/?verify_certs=False
 ```
 
-
-
 #### Exasol
 
 The recommended connector library for Exasol is
@@ -726,7 +715,6 @@ The connection string for Exasol looks like this:
 ```
 exa+pyodbc://{username}:{password}@{hostname}:{port}/my_schema?CONNECTIONLCALL=en_US.UTF-8&driver=EXAODBC
 ```
-
 
 #### Firebird
 
@@ -744,7 +732,6 @@ Here's a connection string example of Superset connecting to a local Firebird da
 ```
 firebird+fdb://SYSDBA:masterkey@192.168.86.38:3050//Library/Frameworks/Firebird.framework/Versions/A/Resources/examples/empbuild/employee.fdb
 ```
-
 
 #### Firebolt
 
@@ -852,8 +839,6 @@ To be able to upload CSV or Excel files to BigQuery in Superset, you'll need to 
 Currently, the Google BigQuery Python SDK is not compatible with `gevent`, due to some dynamic monkeypatching on python core library by `gevent`.
 So, when you deploy Superset with `gunicorn` server, you have to use worker type except `gevent`.
 
-
-
 #### Google Sheets
 
 Google Sheets has a very limited
@@ -863,7 +848,6 @@ connector library for Google Sheets is [shillelagh](https://github.com/betodealm
 There are a few steps involved in connecting Superset to Google Sheets. This
 [tutorial](https://preset.io/blog/2020-06-01-connect-superset-google-sheets/) has the most up to date
 instructions on setting up this connection.
-
 
 #### Hana
 
@@ -875,7 +859,6 @@ The connection string is formatted as follows:
 hana://{username}:{password}@{host}:{port}
 ```
 
-
 #### Apache Hive
 
 The [pyhive](https://pypi.org/project/PyHive/) library is the recommended way to connect to Hive through SQLAlchemy.
@@ -885,7 +868,6 @@ The expected connection string is formatted as follows:
 ```
 hive://hive@{hostname}:{port}/{database}
 ```
-
 
 #### Hologres
 
@@ -905,7 +887,6 @@ The connection string looks like:
 postgresql+psycopg2://{username}:{password}@{host}:{port}/{database}
 ```
 
-
 #### IBM DB2
 
 The [IBM_DB_SA](https://github.com/ibmdb/python-ibmdbsa/tree/master/ibm_db_sa) library provides a
@@ -923,7 +904,6 @@ There are two DB2 dialect versions implemented in SQLAlchemy. If you are connect
 ibm_db_sa://{username}:{passport}@{hostname}:{port}/{database}
 ```
 
-
 #### Apache Impala
 
 The recommended connector library to Apache Impala is [impyla](https://github.com/cloudera/impyla).
@@ -933,7 +913,6 @@ The expected connection string is formatted as follows:
 ```
 impala://{hostname}:{port}/{database}
 ```
-
 
 #### Kusto
 
@@ -955,7 +934,6 @@ kustokql+https://{cluster_url}/{database}?azure_ad_client_id={azure_ad_client_id
 Make sure the user has privileges to access and use all required
 databases/tables/views.
 
-
 #### Apache Kylin
 
 The recommended connector library for Apache Kylin is
@@ -966,10 +944,6 @@ The expected connection string is formatted as follows:
 ```
 kylin://<username>:<password>@<hostname>:<port>/<project>?<param1>=<value1>&<param2>=<value2>
 ```
-
-
-
-
 
 #### MySQL
 
@@ -995,7 +969,6 @@ One problem with `mysqlclient` is that it will fail to connect to newer MySQL da
 mysql+mysqlconnector://{username}:{password}@{host}/{database}
 ```
 
-
 #### IBM Netezza Performance Server
 
 The [nzalchemy](https://pypi.org/project/nzalchemy/) library provides a
@@ -1012,13 +985,11 @@ netezza+nzpy://{username}:{password}@{hostname}:{port}/{database}
 The [sqlalchemy-oceanbase](https://pypi.org/project/oceanbase_py/) library is the recommended
 way to connect to OceanBase through SQLAlchemy.
 
-
 The connection string for OceanBase looks like this:
 
 ```
 oceanbase://<User>:<Password>@<Host>:<Port>/<Database>
 ```
-
 
 #### Ocient DB
 
@@ -1049,8 +1020,6 @@ The connection string is formatted as follows:
 oracle://<username>:<password>@<hostname>:<port>
 ```
 
-
-
 #### Apache Pinot
 
 The recommended connector library for Apache Pinot is [pinotdb](https://pypi.org/project/pinotdb/).
@@ -1069,6 +1038,7 @@ pinot://<username>:<password>@<pinot-broker-host>:<pinot-broker-port>/query/sql?
 
 If you want to use explore view or joins, window functions, etc. then enable [multi-stage query engine](https://docs.pinot.apache.org/reference/multi-stage-engine).
 Add below argument while creating database connection in Advanced -> Other -> ENGINE PARAMETERS
+
 ```
 {"connect_args":{"use_multistage_engine":"true"}}
 ```
@@ -1108,7 +1078,6 @@ More information about PostgreSQL connection options can be found in the
 [SQLAlchemy docs](https://docs.sqlalchemy.org/en/13/dialects/postgresql.html#module-sqlalchemy.dialects.postgresql.psycopg2)
 and the
 [PostgreSQL docs](https://www.postgresql.org/docs/9.1/libpq-connect.html#LIBPQ-PQCONNECTDBPARAMS).
-
 
 #### Presto
 
@@ -1152,8 +1121,6 @@ SSL Secure extra add json config to extra connection information.
 }
 ```
 
-
-
 #### RisingWave
 
 The recommended connector library for RisingWave is
@@ -1164,7 +1131,6 @@ The expected connection string is formatted as follows:
 ```
 risingwave://root@{hostname}:{port}/{database}?sslmode=disable
 ```
-
 
 #### Rockset
 
@@ -1184,7 +1150,6 @@ rockset://{api key}:@{api server}/{VI ID}
 ```
 
 For more complete instructions, we recommend the [Rockset documentation](https://docs.rockset.com/apache-superset/).
-
 
 #### Snowflake
 
@@ -1224,7 +1189,7 @@ And if you want connect Snowflake with [Key Pair Authentication](https://docs.sn
 Please make sure you have the key pair and the public key is registered in Snowflake.
 To connect Snowflake with Key Pair Authentication, you need to add the following parameters to "SECURE EXTRA" field.
 
-***Please note that you need to merge multi-line private key content to one line and insert `\n` between each line***
+**_Please note that you need to merge multi-line private key content to one line and insert `\n` between each line_**
 
 ```
 {
@@ -1259,7 +1224,6 @@ The connection string for Solr looks like this:
 solr://{username}:{password}@{host}:{port}/{server_path}/{collection}[/?use_ssl=true|false]
 ```
 
-
 #### Apache Spark SQL
 
 The recommended connector library for Apache Spark SQL [pyhive](https://pypi.org/project/PyHive/).
@@ -1283,6 +1247,7 @@ mssql+pymssql://<Username>:<Password>@<Host>:<Port-default:1433>/<Database Name>
 It is also possible to connect using [pyodbc](https://pypi.org/project/pyodbc) with the parameter [odbc_connect](https://docs.sqlalchemy.org/en/14/dialects/mssql.html#pass-through-exact-pyodbc-string)
 
 The connection string for SQL Server looks like this:
+
 ```
 mssql+pyodbc:///?odbc_connect=Driver%3D%7BODBC+Driver+17+for+SQL+Server%7D%3BServer%3Dtcp%3A%3Cmy_server%3E%2C1433%3BDatabase%3Dmy_database%3BUid%3Dmy_user_name%3BPwd%3Dmy_password%3BEncrypt%3Dyes%3BConnection+Timeout%3D30
 ```
@@ -1321,9 +1286,9 @@ teradatasql://{user}:{password}@{host}
 #### ODBC Driver
 
 There's also an older connector named
- [sqlalchemy-teradata](https://github.com/Teradata/sqlalchemy-teradata) that
- requires the installation of ODBC drivers. The Teradata ODBC Drivers
- are available
+[sqlalchemy-teradata](https://github.com/Teradata/sqlalchemy-teradata) that
+requires the installation of ODBC drivers. The Teradata ODBC Drivers
+are available
 here: https://downloads.teradata.com/download/connectivity/odbc-driver/linux
 
 Here are the required environment variables:
@@ -1334,11 +1299,11 @@ export ODBCINST=/.../teradata/client/ODBC_64/odbcinst.ini
 ```
 
 We recommend using the first library because of the
- lack of requirement around ODBC drivers and
- because it's more regularly updated.
-
+lack of requirement around ODBC drivers and
+because it's more regularly updated.
 
 #### TimescaleDB
+
 [TimescaleDB](https://www.timescale.com) is the open-source relational database for time-series and analytics to build powerful data-intensive applications.
 TimescaleDB is a PostgreSQL extension, and you can use the standard PostgreSQL connector library, [psycopg2](https://www.psycopg.org/docs/), to connect to the database.
 
@@ -1370,45 +1335,53 @@ postgresql://{username}:{password}@{host}:{port}/{database name}?sslmode=require
 
 [Learn more about TimescaleDB!](https://docs.timescale.com/)
 
-
 #### Trino
 
 Supported trino version 352 and higher
 
 ##### Connection String
+
 The connection string format is as follows:
+
 ```
 trino://{username}:{password}@{hostname}:{port}/{catalog}
 ```
 
 If you are running Trino with docker on local machine, please use the following connection URL
+
 ```
 trino://trino@host.docker.internal:8080
 ```
 
 ##### Authentications
-###### 1. Basic Authentication
-You can provide `username`/`password` in the connection string or in the `Secure Extra` field at `Advanced / Security`
-* In Connection String
-    ```
-    trino://{username}:{password}@{hostname}:{port}/{catalog}
-    ```
 
-* In `Secure Extra` field
-    ```json
-    {
-        "auth_method": "basic",
-        "auth_params": {
-            "username": "<username>",
-            "password": "<password>"
-        }
+###### 1. Basic Authentication
+
+You can provide `username`/`password` in the connection string or in the `Secure Extra` field at `Advanced / Security`
+
+- In Connection String
+
+  ```
+  trino://{username}:{password}@{hostname}:{port}/{catalog}
+  ```
+
+- In `Secure Extra` field
+  ```json
+  {
+    "auth_method": "basic",
+    "auth_params": {
+      "username": "<username>",
+      "password": "<password>"
     }
-    ```
+  }
+  ```
 
 NOTE: if both are provided, `Secure Extra` always takes higher priority.
 
 ###### 2. Kerberos Authentication
+
 In `Secure Extra` field, config as following example:
+
 ```json
 {
     "auth_method": "kerberos",
@@ -1425,33 +1398,39 @@ All fields in `auth_params` are passed directly to the [`KerberosAuthentication`
 NOTE: Kerberos authentication requires installing the [`trino-python-client`](https://github.com/trinodb/trino-python-client) locally with either the `all` or `kerberos` optional features, i.e., installing `trino[all]` or `trino[kerberos]` respectively.
 
 ###### 3. Certificate Authentication
+
 In `Secure Extra` field, config as following example:
+
 ```json
 {
-    "auth_method": "certificate",
-    "auth_params": {
-        "cert": "/path/to/cert.pem",
-        "key": "/path/to/key.pem"
-    }
+  "auth_method": "certificate",
+  "auth_params": {
+    "cert": "/path/to/cert.pem",
+    "key": "/path/to/key.pem"
+  }
 }
 ```
 
 All fields in `auth_params` are passed directly to the [`CertificateAuthentication`](https://github.com/trinodb/trino-python-client/blob/0.315.0/trino/auth.py#L416) class.
 
 ###### 4. JWT Authentication
+
 Config `auth_method` and provide token in `Secure Extra` field
+
 ```json
 {
-    "auth_method": "jwt",
-    "auth_params": {
-        "token": "<your-jwt-token>"
-    }
+  "auth_method": "jwt",
+  "auth_params": {
+    "token": "<your-jwt-token>"
+  }
 }
 ```
 
 ###### 5. Custom Authentication
+
 To use custom authentication, first you need to add it into
 `ALLOWED_EXTRA_AUTHENTICATIONS` allow list in Superset config file:
+
 ```python
 from your.module import AuthClass
 from another.extra import auth_method
@@ -1465,6 +1444,7 @@ ALLOWED_EXTRA_AUTHENTICATIONS: Dict[str, Dict[str, Callable[..., Any]]] = {
 ```
 
 Then in `Secure Extra` field:
+
 ```json
 {
     "auth_method": "custom_auth",
@@ -1480,8 +1460,8 @@ or factory function (which returns an `Authentication` instance) to `auth_method
 All fields in `auth_params` are passed directly to your class/function.
 
 **Reference**:
-* [Trino-Superset-Podcast](https://trino.io/episodes/12.html)
 
+- [Trino-Superset-Podcast](https://trino.io/episodes/12.html)
 
 #### Vertica
 
@@ -1508,7 +1488,6 @@ Other parameters:
 
 - Load Balancer - Backup Host
 
-
 #### YugabyteDB
 
 [YugabyteDB](https://www.yugabyte.com/) is a distributed SQL database built on top of PostgreSQL.
@@ -1522,8 +1501,6 @@ The connection string looks like:
 ```
 postgresql://{username}:{password}@{host}:{port}/{database}
 ```
-
-
 
 ## Connecting through the UI
 
@@ -1597,9 +1574,6 @@ For databases like MySQL and Postgres that use the standard format of `engine+dr
 
 For other databases you need to implement these methods yourself. The BigQuery DB engine spec is a good example of how to do that.
 
-
-
-
 ### Extra Database Settings
 
 ##### Deeper SQLAlchemy Integration
@@ -1663,8 +1637,6 @@ You can use the `Extra` field in the **Edit Databases** form to configure SSL:
 }
 ```
 
-
-
 ## Misc.
 
 ### Querying across databases
@@ -1706,5 +1678,5 @@ Second, you might want to change the value of `SUPERSET_META_DB_LIMIT`. The defa
 Additionally, you might want to restrict the databases to with the meta database has access to. This can be done in the database configuration, under "Advanced" -> "Other" -> "ENGINE PARAMETERS" and adding:
 
 ```json
-{"allowed_dbs":["Google Sheets","examples"]}
+{ "allowed_dbs": ["Google Sheets", "examples"] }
 ```

@@ -18,21 +18,21 @@ slice_name: Work Location Preference
 viz_type: pie
 params:
   adhoc_filters:
-  - clause: WHERE
-    comparator: '0'
-    expressionType: SIMPLE
-    filterOptionName: filter_qzz67uip1ue_jw3rr6tzo3a
-    isExtra: false
-    isNew: false
-    operator: ==
-    sqlExpression: null
-    subject: is_software_dev
+    - clause: WHERE
+      comparator: "0"
+      expressionType: SIMPLE
+      filterOptionName: filter_qzz67uip1ue_jw3rr6tzo3a
+      isExtra: false
+      isNew: false
+      operator: ==
+      sqlExpression: null
+      subject: is_software_dev
   color_scheme: supersetColors
   datasource: 42__table
   donut: true
   granularity_sqla: time_start
   groupby:
-  - job_location_preference
+    - job_location_preference
   innerRadius: 44
   labels_outside: true
   metric: count

@@ -18,33 +18,33 @@ slice_name: How do you prefer to work?
 viz_type: heatmap
 params:
   adhoc_filters:
-  - clause: WHERE
-    comparator: '0'
-    expressionType: SIMPLE
-    filterOptionName: filter_v65f0j14bk_35oi0g94srk
-    isExtra: false
-    isNew: false
-    operator: ==
-    sqlExpression: null
-    subject: is_software_dev
-  - clause: WHERE
-    comparator: 'NULL'
-    expressionType: SIMPLE
-    filterOptionName: filter_qb5ionb8wcq_ki4aimey4do
-    isExtra: false
-    isNew: false
-    operator: '!='
-    sqlExpression: null
-    subject: school_degree
-  - clause: WHERE
-    comparator: 'NULL'
-    expressionType: SIMPLE
-    filterOptionName: filter_3n0z71frg5c_xqnl179to7
-    isExtra: false
-    isNew: false
-    operator: '!='
-    sqlExpression: null
-    subject: job_pref
+    - clause: WHERE
+      comparator: "0"
+      expressionType: SIMPLE
+      filterOptionName: filter_v65f0j14bk_35oi0g94srk
+      isExtra: false
+      isNew: false
+      operator: ==
+      sqlExpression: null
+      subject: is_software_dev
+    - clause: WHERE
+      comparator: "NULL"
+      expressionType: SIMPLE
+      filterOptionName: filter_qb5ionb8wcq_ki4aimey4do
+      isExtra: false
+      isNew: false
+      operator: "!="
+      sqlExpression: null
+      subject: school_degree
+    - clause: WHERE
+      comparator: "NULL"
+      expressionType: SIMPLE
+      filterOptionName: filter_3n0z71frg5c_xqnl179to7
+      isExtra: false
+      isNew: false
+      operator: "!="
+      sqlExpression: null
+      subject: job_pref
   all_columns_x: job_pref
   all_columns_y: school_degree
   bottom_margin: auto
@@ -68,8 +68,8 @@ params:
   viz_type: heatmap
   xscale_interval: null
   y_axis_bounds:
-  - null
-  - null
+    - null
+    - null
   y_axis_format: SMART_NUMBER
   yscale_interval: null
 cache_timeout: null
