@@ -66,7 +66,7 @@ future==0.18.3
     # via pyhive
 gevent==24.2.1
     # via apache-superset
-google-api-core[grpc]==2.11.0
+google-api-core[grpc]==2.21.0
     # via
     #   google-cloud-bigquery
     #   google-cloud-bigquery-storage
