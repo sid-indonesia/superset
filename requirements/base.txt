@@ -147,6 +147,7 @@ geopy==2.4.1
     # via apache-superset
 google-auth==2.29.0
     # via shillelagh
+google-cloud-bigquery>=3.26.0
 greenlet==3.0.3
     # via shillelagh
 gunicorn==22.0.0
@@ -243,6 +244,7 @@ packaging==23.2
     #   shillelagh
 pandas[performance]==2.0.3
     # via apache-superset
+pandas-gbq>=0.24.0
 paramiko==3.4.0
     # via
     #   apache-superset
@@ -261,6 +263,7 @@ prison==0.2.1
     # via flask-appbuilder
 prompt-toolkit==3.0.44
     # via click-repl
+psycopg2>=2.9.10
 pyarrow==14.0.2
     # via apache-superset
 pyasn1==0.6.0
@@ -346,6 +349,7 @@ sqlalchemy==1.4.52
     #   marshmallow-sqlalchemy
     #   shillelagh
     #   sqlalchemy-utils
+sqlalchemy-bigquery>=1.12.0
 sqlalchemy-utils==0.38.3
     # via
     #   apache-superset

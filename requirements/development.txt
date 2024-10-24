@@ -66,7 +66,7 @@ future==0.18.3
     # via pyhive
 gevent==24.2.1
     # via apache-superset
-google-api-core[grpc]==2.11.0
+google-api-core[grpc]==2.21.0
     # via
     #   google-cloud-bigquery
     #   google-cloud-bigquery-storage
@@ -77,20 +77,20 @@ google-auth-oauthlib==1.0.0
     # via
     #   pandas-gbq
     #   pydata-google-auth
-google-cloud-bigquery==3.20.1
+google-cloud-bigquery==3.26.0
     # via
     #   apache-superset
     #   pandas-gbq
     #   sqlalchemy-bigquery
-google-cloud-bigquery-storage==2.19.1
+google-cloud-bigquery-storage==2.27.0
     # via pandas-gbq
-google-cloud-core==2.3.2
+google-cloud-core==2.4.1
     # via google-cloud-bigquery
-google-crc32c==1.5.0
+google-crc32c==1.6.0
     # via google-resumable-media
-google-resumable-media==2.7.0
+google-resumable-media==2.7.2
     # via google-cloud-bigquery
-googleapis-common-protos==1.63.0
+googleapis-common-protos==1.65.0
     # via
     #   google-api-core
     #   grpcio-status
@@ -139,7 +139,7 @@ openapi-spec-validator==0.5.6
     # via apache-superset
 openpyxl==3.1.2
     # via dataflows-tabulator
-pandas-gbq==0.19.1
+pandas-gbq==0.24.0
     # via apache-superset
 parameterized==0.9.0
     # via apache-superset
@@ -165,9 +165,9 @@ progress==1.6
     # via apache-superset
 prophet==1.1.5
     # via apache-superset
-proto-plus==1.22.2
+proto-plus==1.25.0
     # via google-cloud-bigquery-storage
-protobuf==4.23.0
+protobuf==5.28.3
     # via
     #   google-api-core
     #   google-cloud-bigquery-storage
@@ -219,7 +219,7 @@ ruff==0.4.5
     # via apache-superset
 s3transfer==0.10.1
     # via boto3
-sqlalchemy-bigquery==1.11.0
+sqlalchemy-bigquery==1.12.0
     # via apache-superset
 sqloxide==0.1.43
     # via apache-superset
