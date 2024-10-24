@@ -84,7 +84,7 @@ google-cloud-bigquery==3.26.0
     #   sqlalchemy-bigquery
 google-cloud-bigquery-storage==2.19.1
     # via pandas-gbq
-google-cloud-core==2.3.2
+google-cloud-core==2.4.1
     # via google-cloud-bigquery
 google-crc32c==1.5.0
     # via google-resumable-media
