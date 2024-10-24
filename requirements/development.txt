@@ -82,7 +82,7 @@ google-cloud-bigquery==3.26.0
     #   apache-superset
     #   pandas-gbq
     #   sqlalchemy-bigquery
-google-cloud-bigquery-storage==2.19.1
+google-cloud-bigquery-storage==2.27.0
     # via pandas-gbq
 google-cloud-core==2.4.1
     # via google-cloud-bigquery
