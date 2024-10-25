@@ -82,11 +82,11 @@ const formData: EchartsMixedTimeseriesFormData = {
   forecastInterval: 0,
   forecastSeasonalityDaily: 0,
   // Properti yang perlu ditambahkan untuk mencocokkan tipe `EchartsMixedTimeseriesFormData`
-  xAxisTitleColor: '#000000',
+  xAxisTitleColor: supersetTheme.colors.grayscale.dark2,
   xAxisTitleFontSize: 12,
   xAxisTitleAlign: 'center',
   xAxisTitleVAlign: 'middle',
-  yAxisTitleColor: '#000000',
+  yAxisTitleColor: supersetTheme.colors.grayscale.dark2,
   yAxisTitleFontSize: 12,
   yAxisTitleAlign: 'center',
   yAxisTitleVAlign: 'middle',

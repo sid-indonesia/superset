@@ -89,13 +89,14 @@ export default function URLShortLinkButton({
             }
           />
           &nbsp;&nbsp;
-          <a href={emailLink}>
+          <a aria-label="Short URL Popover" href={emailLink}>
             <i className="fa fa-envelope" />
           </a>
         </div>
       }
     >
       <span
+        aria-label="Short Link Trigger"
         className="short-link-trigger btn btn-default btn-sm"
         tabIndex={-1}
         role="button"

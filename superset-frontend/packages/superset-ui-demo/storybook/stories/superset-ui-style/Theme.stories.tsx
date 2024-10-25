@@ -37,7 +37,10 @@ export const ThemeColors = () => {
               <td>
                 <code>{hex}</code>
               </td>
-              <td style={{ width: '150px', backgroundColor: hex }} />
+              <td
+                aria-label="Theme Colors"
+                style={{ width: '150px', backgroundColor: hex }}
+              />
             </tr>
           );
         })}

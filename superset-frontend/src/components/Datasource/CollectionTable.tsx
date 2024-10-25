@@ -415,7 +415,7 @@ export default class CRUDCollection extends PureComponent<
       )),
     );
     if (allowAddItem) {
-      tds.push(<td key="add" />);
+      tds.push(<td aria-label="Add item" key="add" />);
     }
     if (allowDeletes) {
       tds.push(
