@@ -157,6 +157,7 @@ export type ContextMenuTransformedProps = {
   ) => void;
   setDataMask?: SetDataMaskHook;
 };
+
 // Penambahan beberapa value untuk memberikan pengaturan interface | Yobi
 export interface TitleFormData {
   xAxisTitle: string;
@@ -166,11 +167,11 @@ export interface TitleFormData {
   xAxisTitleAlign: string; // Code yang ditambahkan | Yobi
   xAxisTitleVAlign: string; // Code yang ditambahkan | Yobi
   yAxisTitle: string;
-  yAxisTitleColor: string; 
+  yAxisTitleColor: string;
   yAxisTitleFontSize: number; // Code yang ditambahkan | Yobi
   yAxisTitleAlign: string; // Code yang ditambahkan | Yobi
   yAxisTitleVAlign: string; // Code yang ditambahkan | Yobi
-  yAxisTitleMargin: number;// Code yang ditambahkan | Yobi
+  yAxisTitleMargin: number; // Code yang ditambahkan | Yobi
   yAxisTitlePosition: string;
 }
 

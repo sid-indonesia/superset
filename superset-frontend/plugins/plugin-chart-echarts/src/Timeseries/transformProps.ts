@@ -106,6 +106,7 @@ import {
   getYAxisFormatter,
 } from '../utils/formatters';
 import { xAxisTitleFontSizeControl } from '../controls';
+
 export default function transformProps(
   chartProps: EchartsTimeseriesChartProps,
 ): TimeseriesChartTransformedProps {
@@ -480,7 +481,7 @@ export default function transformProps(
     nameGap: convertInteger(xAxisTitleMargin),
     nameLocation: 'middle',
     nameTextStyle: {
-      color: '#000000',
+      color: theme.colors.grayscale.dark2, // Replace '#000000' with a theme color variable
       fontSize: convertInteger(xAxisTitleFontSizeControl.config.default), // code untuk menambahkan fitur dropdown pemilihan size X dan Y label di tampilan Superset
     },
     // axisLabel juga dilakukan modifikasi, tapi untuk mengatur nilai default saja
@@ -489,7 +490,7 @@ export default function transformProps(
       formatter: xAxisFormatter,
       rotate: xAxisLabelRotation,
       interval: 0, // value yang ditambahkan
-      color: '#000000', // value yang ditambahkan
+      color: theme.colors.grayscale.dark2, // Replace '#000000' with a theme color variable // value yang ditambahkan
       fontSize: 24, // value yang ditambahkan
     },
     minorTick: { show: minorTicks },
