@@ -81,12 +81,15 @@ const formData: EchartsMixedTimeseriesFormData = {
   forecastPeriods: [],
   forecastInterval: 0,
   forecastSeasonalityDaily: 0,
-  // Missing properties that caused the error
-  xAxisTitleColor: '#000000',          // Example: Default black color for the x-axis title
-  xAxisTitleFontSize: 12,              // Example: Default font size of 12px
-  xAxisTitleAlign: 'center',           // Example: Center alignment for the x-axis title
-  xAxisTitleVAlign: 'middle',          // Example: Vertical alignment for x-axis title
-  yAxisTitleVAlign: 'middle',          // Example: Vertical alignment for y-axis title
+  // Properti yang perlu ditambahkan untuk mencocokkan tipe `EchartsMixedTimeseriesFormData`
+  xAxisTitleColor: '#000000',
+  xAxisTitleFontSize: 12,
+  xAxisTitleAlign: 'center',
+  xAxisTitleVAlign: 'middle',
+  yAxisTitleColor: '#000000',
+  yAxisTitleFontSize: 12,
+  yAxisTitleAlign: 'center',
+  yAxisTitleVAlign: 'middle',
 };
 
 const queriesData = [
