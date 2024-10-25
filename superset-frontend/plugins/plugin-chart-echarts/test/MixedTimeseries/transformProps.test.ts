@@ -81,6 +81,12 @@ const formData: EchartsMixedTimeseriesFormData = {
   forecastPeriods: [],
   forecastInterval: 0,
   forecastSeasonalityDaily: 0,
+  // Missing properties that caused the error
+  xAxisTitleColor: '#000000',          // Example: Default black color for the x-axis title
+  xAxisTitleFontSize: 12,              // Example: Default font size of 12px
+  xAxisTitleAlign: 'center',           // Example: Center alignment for the x-axis title
+  xAxisTitleVAlign: 'middle',          // Example: Vertical alignment for x-axis title
+  yAxisTitleVAlign: 'middle',          // Example: Vertical alignment for y-axis title
 };
 
 const queriesData = [
