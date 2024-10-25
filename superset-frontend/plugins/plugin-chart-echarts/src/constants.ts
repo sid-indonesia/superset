@@ -53,8 +53,8 @@ export const LABEL_POSITION: [LabelPositionEnum, string][] = [
   [LabelPositionEnum.Right, 'Right'],
   [LabelPositionEnum.Bottom, 'Bottom'],
   [LabelPositionEnum.Inside, 'Inside'],
-  [LabelPositionEnum.InsideLeft, 'Inside left'],
-  [LabelPositionEnum.InsideRight, 'Inside right'],
+  [LabelPositionEnum.InsideBottomLeft, 'Inside left'],
+  [LabelPositionEnum.InsideBottomRight, 'Inside right'],
   [LabelPositionEnum.InsideTop, 'Inside top'],
   [LabelPositionEnum.InsideBottom, 'Inside bottom'],
   [LabelPositionEnum.InsideTopLeft, 'Inside top left'],
@@ -106,11 +106,19 @@ export const DEFAULT_LEGEND_FORM_DATA: LegendFormData = {
 };
 
 export const DEFAULT_TITLE_FORM_DATA: TitleFormData = {
-  xAxisTitle: '',
-  xAxisTitleMargin: 0,
-  yAxisTitle: '',
-  yAxisTitleMargin: 0,
-  yAxisTitlePosition: 'Top',
+  xAxisTitle: '', // Properti yang sudah ada
+  xAxisTitleMargin: 0, // Properti yang sudah ada
+  xAxisTitleColor: '#000000', // Properti yang ditambahkan
+  xAxisTitleFontSize: 24, // Properti yang ditambahkan
+  xAxisTitleAlign: 'center', // Properti yang ditambahkan
+  xAxisTitleVAlign: 'middle', // Properti yang ditambahkan
+  yAxisTitle: '', // Properti yang sudah ada
+  yAxisTitleColor: '#000000', // Properti yang ditambahkan
+  yAxisTitleFontSize: 24, // Properti yang ditambahkan
+  yAxisTitleAlign: 'center', // Properti yang ditambahkan
+  yAxisTitleVAlign: 'middle', // Properti yang ditambahkan
+  yAxisTitleMargin: 0, // Properti yang ditambahkan
+  yAxisTitlePosition: 'end', // Properti yang sudah ada
 };
 
 export { DEFAULT_FORM_DATA } from './Timeseries/constants';
