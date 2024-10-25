@@ -157,10 +157,6 @@ export type ContextMenuTransformedProps = {
   ) => void;
   setDataMask?: SetDataMaskHook;
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> bcb2c9a0c (4.0.2 percobaan keempat)
 // Penambahan beberapa value untuk memberikan pengaturan interface | Yobi
 export interface TitleFormData {
   xAxisTitle: string;
