@@ -25,10 +25,12 @@ export const defaultGrid = {
 export const defaultYAxis = {
   scale: true,
   yAxisLabelRotation: 0,
+  yAxisTitleFontSize: 18, // Menambahkan default Value
 };
 
 export const defaultXAxis = {
   xAxisLabelRotation: 0,
+  xAxisTitleFontSize: 18, // Menambahkan default Value
 };
 
 export const defaultLegendPadding = {

@@ -17,7 +17,12 @@
  * under the License.
  */
 
-import { JsonValue, t, TimeGranularity } from '@superset-ui/core';
+import {
+  JsonValue,
+  t,
+  TimeGranularity,
+  supersetTheme,
+} from '@superset-ui/core';
 import { ReactNode } from 'react';
 import {
   LabelPositionEnum,
@@ -106,11 +111,19 @@ export const DEFAULT_LEGEND_FORM_DATA: LegendFormData = {
 };
 
 export const DEFAULT_TITLE_FORM_DATA: TitleFormData = {
-  xAxisTitle: '',
-  xAxisTitleMargin: 0,
-  yAxisTitle: '',
-  yAxisTitleMargin: 0,
-  yAxisTitlePosition: 'Top',
+  xAxisTitle: '', // Properti yang sudah ada
+  xAxisTitleMargin: 0, // Properti yang sudah ada
+  xAxisTitleColor: supersetTheme.colors.grayscale.dark2, // Use theme color variable
+  xAxisTitleFontSize: 24, // Properti yang ditambahkan
+  xAxisTitleAlign: 'center', // Properti yang ditambahkan
+  xAxisTitleVAlign: 'middle', // Properti yang ditambahkan
+  yAxisTitle: '', // Properti yang sudah ada
+  yAxisTitleColor: supersetTheme.colors.grayscale.dark2, // Use theme color variable
+  yAxisTitleFontSize: 24, // Properti yang ditambahkan
+  yAxisTitleAlign: 'center', // Properti yang ditambahkan
+  yAxisTitleVAlign: 'middle', // Properti yang ditambahkan
+  yAxisTitleMargin: 0, // Properti yang ditambahkan
+  yAxisTitlePosition: 'end', // Properti yang sudah ada
 };
 
 export { DEFAULT_FORM_DATA } from './Timeseries/constants';

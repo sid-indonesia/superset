@@ -97,7 +97,11 @@ const legendOrientationControl: ControlSetItem = {
 };
 
 export const legendSection: ControlSetRow[] = [
-  [<ControlSubSectionHeader>{t('Legend')}</ControlSubSectionHeader>],
+  [
+    <ControlSubSectionHeader key="legend-header">
+      {t('Legend')}
+    </ControlSubSectionHeader>,
+  ],
   [showLegendControl],
   [legendTypeControl],
   [legendOrientationControl],
@@ -317,5 +321,18 @@ export const forceCategorical: ControlSetItem = {
     default: false,
     renderTrigger: true,
     description: t('Make the x-axis categorical'),
+  },
+};
+
+// MEnambahkan xAxisTitleFontSize dan nilainya | Yobi
+export const xAxisTitleFontSizeControl = {
+  name: 'xAxisTitleFontSizeControl',
+  config: {
+    type: 'TextControl',
+    isInt: true,
+    label: t('Font Size'),
+    default: defaultXAxis.xAxisTitleFontSize,
+    renderTrigger: true,
+    description: t('xAxisLabelFontSize'),
   },
 };
